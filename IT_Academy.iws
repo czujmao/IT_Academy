@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eae934c-a868-42c4-8393-d1de33fa27fa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IT_Academy.iws" afterPath="$PROJECT_DIR$/IT_Academy.iws" />
     </list>
     <ignored path="IT_Academy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372434762393" ignored="false" />
+    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372434831033" ignored="false" />
     <file path="/Game.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372431641388" ignored="false" />
     <file path="/Clac.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372433373877" ignored="false" />
     <file path="/Stack.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372434384204" ignored="false" />
+    <file path="/Calc.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372442210288" ignored="false" />
+    <file path="/FileReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372441892523" ignored="false" />
+    <file path="/StdReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372437778992" ignored="false" />
+    <file path="/FlReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372438334465" ignored="false" />
+    <file path="/MyReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372439664455" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +80,7 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="26" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+            <state line="29" column="12" selection-start="939" selection-end="959" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,16 +91,27 @@
       <file leaf-file-name="Calc.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+            <state line="42" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyReader.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="50" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.58195925">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stack.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Stack.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="18" selection-start="570" selection-end="570" vertical-scroll-proportion="0.4419643">
+            <state line="14" column="9" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,15 +144,19 @@
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/Game.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Clac.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/FileReader.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/FlReader.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/StdReader.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="28" />
-    <option name="width" value="1900" />
-    <option name="height" value="1160" />
+    <option name="x" value="49" />
+    <option name="y" value="24" />
+    <option name="width" value="1871" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -419,11 +441,15 @@
       <created>1372434770961</created>
       <updated>1372434770961</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="First">
+      <created>1372434835501</created>
+      <updated>1372434835501</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="28" width="1900" height="1160" extended-state="0" />
+    <frame x="49" y="24" width="1871" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -434,12 +460,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32949087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923368" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973032" sideWeight="0.6705091" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25369862" sideWeight="0.6707663" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -537,7 +563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="26" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+        <state line="29" column="12" selection-start="939" selection-end="959" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -546,14 +572,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="42" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="18" selection-start="570" selection-end="570" vertical-scroll-proportion="0.4419643">
+        <state line="14" column="9" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="50" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.58195925">
           <folding />
         </state>
       </provider>
