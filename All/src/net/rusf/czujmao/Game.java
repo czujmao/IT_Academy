@@ -1,13 +1,5 @@
 package net.rusf.czujmao;
 
-/**
- * Created with IntelliJ IDEA.
- * User: user
- * Date: 26.06.13
- * Time: 21:34
- * To change this template use File | Settings | File Templates.
- */
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,7 +13,10 @@ public class Game {
         if (args.length > 0) {
             try {
                 max_int = Integer.parseInt(args[0]);
-            } catch (NumberFormatException eX) {}
+            } catch (NumberFormatException eX) {
+                System.out.println("На входе может быть только число!");
+                System.exit(0);
+            }
         }
 
         BufferedReader Inner = new BufferedReader(new InputStreamReader(System.in));
@@ -39,7 +34,9 @@ public class Game {
                 System.out.println("Попытка № " + curr_try);
                 try {
                     mystr = Inner.readLine();
-                } catch (IOException eX) {}
+                } catch (IOException eX) {
+                    System.out.println("Ошибка ввода!");
+                }
                 if ("q".equals(mystr)) {
                     break;
                 }
@@ -50,12 +47,14 @@ public class Game {
                         curr_try = max_try + 10;
                     } else if (myint > curr_int) {
                         System.out.println("Ваше число больше");
-                        curr_try = curr_try + 1;
+                        curr_try += 1;
                     } else {
                         System.out.println("Ваше число меньше");
-                        curr_try = curr_try + 1;
+                        curr_try += 1;
                     }
-                } catch (NumberFormatException eX) {}
+                } catch (NumberFormatException eX) {
+                    System.out.println("Это не число!");
+                }
                 if (curr_try == max_try + 1) {
                     System.out.println("Увы, вы проиграли");
                 }
