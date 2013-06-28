@@ -2,6 +2,11 @@ package net.rusf.czujmao.calc;
 
 import java.io.*;
 
+/**
+ * It's one-line-reader from file or StdIO
+ * Count read line from file
+ */
+
 public class MyReader {
     private BufferedReader Inner;
     private long count = 0;

@@ -1,0 +1,30 @@
+DEFINE a …
+DEFINE b …
+DEFINE c …
+PUSH -b
+PUSH b
+QRT
+PUSH 4
+PUSH a
+PUSH с
+*
+*
+-
+SQRT
+DEFINE d
++
+PUSH 2
+PUSH a
+*
+/
+PRINT
+#
+POP
+PUSH -b
+PUSH d
+-
+PUSH 2
+PUSH a
+*
+/
+PRINT

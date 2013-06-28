@@ -2,22 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eae934c-a868-42c4-8393-d1de33fa27fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/unitTest" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IT_Academy.iws" afterPath="$PROJECT_DIR$/IT_Academy.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java" />
     </list>
     <ignored path="IT_Academy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443285384" ignored="false" />
+    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443383468" ignored="false" />
     <file path="/Game.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372431641388" ignored="false" />
     <file path="/Clac.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372433373877" ignored="false" />
-    <file path="/Stack.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372434384204" ignored="false" />
+    <file path="/Stack.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443816925" ignored="false" />
     <file path="/Calc.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443196482" ignored="false" />
-    <file path="/FileReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372441892523" ignored="false" />
+    <file path="/FileReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443736837" ignored="false" />
     <file path="/StdReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372437778992" ignored="false" />
     <file path="/FlReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372438334465" ignored="false" />
     <file path="/MyReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372439664455" ignored="false" />
     <file path="/Exec.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443118674" ignored="false" />
+    <file path="/Calculator.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443968346" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,10 +81,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/Game.java">
+      <file leaf-file-name="Calculator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="12" selection-start="939" selection-end="959" vertical-scroll-proportion="0.0">
+            <state line="3" column="33" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unitTest" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/unitTest">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="10" selection-start="101" selection-end="101" vertical-scroll-proportion="0.329429">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calc.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="99" selection-end="132" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,28 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calc.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="32" selection-end="70" vertical-scroll-proportion="0.046852123">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Calculator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="22" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MyReader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="1" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
+            <state line="6" column="28" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,7 +122,7 @@
       <file leaf-file-name="Stack.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="9" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+            <state line="21" column="12" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,14 +154,15 @@
         <option value="$PROJECT_DIR$/net.rusf.czujmao/src/Game.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/Game.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Clac.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/FileReader.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/FlReader.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/StdReader.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Exec.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/unitTest" />
       </list>
     </option>
   </component>
@@ -459,7 +463,11 @@
       <created>1372442439311</created>
       <updated>1372442439311</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="First">
+      <created>1372443389405</created>
+      <updated>1372443389405</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -577,7 +585,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="12" selection-start="939" selection-end="959" vertical-scroll-proportion="0.0">
+        <state line="29" column="12" selection-start="939" selection-end="959" vertical-scroll-proportion="0.6090776">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -586,28 +594,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+        <state line="21" column="12" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/MyReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="1" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="22" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+        <state line="6" column="28" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="32" selection-end="70" vertical-scroll-proportion="0.046852123">
+        <state line="8" column="0" selection-start="99" selection-end="132" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="33" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/unitTest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="10" selection-start="101" selection-end="101" vertical-scroll-proportion="0.329429">
           <folding />
         </state>
       </provider>

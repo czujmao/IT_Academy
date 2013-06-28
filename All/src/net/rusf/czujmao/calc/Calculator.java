@@ -1,5 +1,8 @@
 package net.rusf.czujmao.calc;
 
+/**
+ * It's main engine of calculator
+ */
 
 public class Calculator {
     static Stack head = new Stack();
