@@ -1,6 +1,5 @@
 package net.rusf.czujmao.calc;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -10,7 +9,7 @@ import java.io.IOException;
 
 public class Calc {
     public static void main(String[] args) throws IOException {
-        MyReader reader;
+        MyReader reader = null;
         boolean fromFile = false;
         if (args.length > 0) {
             try {
@@ -22,9 +21,9 @@ public class Calc {
         } else {
             reader = new MyReader();
         }
-        Stack head = new Stack();
+        Calculator c = new Calculator();
         while (true) {
-            byte res = exec(reader.next());
+            byte res = c.exec(reader.next());
             switch (res) {
                 case 0: if (fromFile) System.out.println("Ok"); break;
                 case 1: System.out.println("Syntax error" + (fromFile?" in line " + reader.getCount():"")); break;
@@ -39,8 +38,5 @@ public class Calc {
                 System.exit(0);
             }
         }
-    }
-    private byte exec(String str) {
-        return 0;
     }
 }
