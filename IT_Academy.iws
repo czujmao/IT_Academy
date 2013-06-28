@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eae934c-a868-42c4-8393-d1de33fa27fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Stack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IT_Academy.iws" afterPath="$PROJECT_DIR$/IT_Academy.iws" />
     </list>
     <ignored path="IT_Academy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372434729039" ignored="false" />
+    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372434762393" ignored="false" />
     <file path="/Game.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372431641388" ignored="false" />
     <file path="/Clac.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372433373877" ignored="false" />
     <file path="/Stack.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372434384204" ignored="false" />
@@ -417,7 +415,11 @@
       <created>1372432042705</created>
       <updated>1372432042705</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="First">
+      <created>1372434770961</created>
+      <updated>1372434770961</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
