@@ -22,12 +22,14 @@ public class Calc {
             reader = new MyReader();
         }
         Calculator c = new Calculator();
+        System.out.println("Welcome to Sack Calculator!");
+        System.out.println("Use '?' for help.");
         while (true) {
             byte res = c.exec(reader.next());
             switch (res) {
                 case 0: if (!fromFile) System.out.println("Ok"); break;
-                case 1: System.out.println("Syntax error" + (fromFile?" in line " + reader.getCount():"")); break;
-                case 2: System.out.println("Runtime error" + (fromFile?" in line " + reader.getCount():"")); break;
+                case 1: System.err.println("Syntax error" + (fromFile?" in line " + reader.getCount():"")); break;
+                case 2: System.err.println("Runtime error" + (fromFile?" in line " + reader.getCount():"")); break;
             }
             if ((-1 == res) || (res > 0 && fromFile)) {
                 try {
