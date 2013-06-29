@@ -25,7 +25,8 @@ public class Calc {
         while (true) {
             byte res = c.exec(reader.next());
             switch (res) {
-                case 0: if (fromFile) System.out.println("Ok"); break;
+                case -1: System.exit(0); break;
+                case 0: if (!fromFile) System.out.println("Ok"); break;
                 case 1: System.out.println("Syntax error" + (fromFile?" in line " + reader.getCount():"")); break;
                 case 2: System.out.println("Runtime error" + (fromFile?" in line " + reader.getCount():"")); break;
             }
