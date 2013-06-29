@@ -21,11 +21,11 @@ public class Calc {
         } else {
             reader = new MyReader();
         }
-        Calculator c = new Calculator();
         System.out.println("Welcome to Sack Calculator!");
         System.out.println("Use '?' for help.");
         while (true) {
-            byte res = c.exec(reader.next());
+            Calculator c = new Calculator(reader.next());
+            byte res = c.exec();
             switch (res) {
                 case 0: if (!fromFile) System.out.println("Ok"); break;
                 case 1: System.err.println("Syntax error" + (fromFile?" in line " + reader.getCount():"")); break;
