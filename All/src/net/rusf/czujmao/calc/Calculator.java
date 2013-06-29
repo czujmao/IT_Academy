@@ -14,7 +14,7 @@ public class Calculator {
 
     }
     byte exec (String str) {
-        byte rez = 0;
+        byte res = 0;
         str = str.trim();
         str = str.replaceAll("\\s+", "\u0020");
         String[] commands = str.split("\u0020");
@@ -28,7 +28,7 @@ public class Calculator {
             case "POP": {
                 if (0 == head.count()) {
                     System.out.println("Stack is empty.");
-                    rez = 2;
+                    res = 2;
                 } else {
                     head.pop();
                 }
@@ -36,12 +36,12 @@ public class Calculator {
             case "PUSH": {
                 if (1 == commands.length) {
                     System.out.println("PUSH mast have argument.");
-                    rez = 1;
+                    res = 1;
                 } else {
                     Double d = Double.parseDouble(commands[1]);
                     if (null == d) {
                         System.out.println("PUSH have error argument.");
-                        rez = 1;
+                        res = 1;
                     } else {
                         head.push(d);
                     }
@@ -53,7 +53,7 @@ public class Calculator {
             case "PRINT": {
                 if (0 == head.count()) {
                     System.out.println("Stack is empty.");
-                    rez = 2;
+                    res = 2;
                 } else {
                     System.out.println(head.get());
                 }
@@ -61,7 +61,7 @@ public class Calculator {
             case "QRT": {
                 if (0 == head.count()) {
                     System.out.println("Stack is empty.");
-                    rez = 2;
+                    res = 2;
                 } else {
                     double d = head.pop();
                     head.push(d * d);
@@ -70,7 +70,7 @@ public class Calculator {
             case "SQRT": {
                 if (0 == head.count()) {
                     System.out.println("Stack is empty.");
-                    rez = 2;
+                    res = 2;
                 } else {
                     double d = head.pop();
                     head.push(Math.sqrt(d));
@@ -80,10 +80,10 @@ public class Calculator {
                 long l = head.count();
                 if (0 == l) {
                     System.out.println("Stack is empty.");
-                    rez = 2;
+                    res = 2;
                 } else if (1 == l) {
                     System.out.println("Stack have only one item.");
-                    rez = 2;
+                    res = 2;
                 } else {
                     double d = head.pop();
                     head.push(head.pop() + d);
@@ -93,10 +93,10 @@ public class Calculator {
                 long l = head.count();
                 if (0 == l) {
                     System.out.println("Stack is empty.");
-                    rez = 2;
+                    res = 2;
                 } else if (1 == l) {
                     System.out.println("Stack have only one item.");
-                    rez = 2;
+                    res = 2;
                 } else {
                     double d = head.pop();
                     head.push(head.pop() - d);
@@ -106,10 +106,10 @@ public class Calculator {
                 long l = head.count();
                 if (0 == l) {
                     System.out.println("Stack is empty.");
-                    rez = 2;
+                    res = 2;
                 } else if (1 == l) {
                     System.out.println("Stack have only one item.");
-                    rez = 2;
+                    res = 2;
                 } else {
                     double d = head.pop();
                     head.push(head.pop() * d);
@@ -119,14 +119,14 @@ public class Calculator {
                 long l = head.count();
                 if (0 == l) {
                     System.out.println("Stack is empty.");
-                    rez = 2;
+                    res = 2;
                 } else if (1 == l) {
                     System.out.println("Stack have only one item.");
-                    rez = 2;
+                    res = 2;
                 } else {
                     if (0 == head.get()) {
                         System.out.println("Divide by zero.");
-                        rez = 2;
+                        res = 2;
                     } else {
                         double d = head.pop();
                         head.push(head.pop() + d);
@@ -134,14 +134,14 @@ public class Calculator {
                 }
             } break;
             case "EXIT": {
-                rez = -1;
+                res = -1;
             } break;
             default:
                 System.out.println("Unknown command.");
-                rez = 1;
+                res = 1;
         }
 
-        return rez;
+        return res;
     }
 
 }
