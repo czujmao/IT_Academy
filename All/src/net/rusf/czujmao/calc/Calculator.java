@@ -11,37 +11,52 @@ public class Calculator {
     static Stack head = new Stack();
     static Map<String, Double> map = new HashMap();
     static String[] commands;
-    Calculator () {
-    }
-    Calculator (String str) {
-        str = str.trim();
+/*
+ * Fill array "commands"
+ */
+    void init (String str) {
         str = str.replaceAll("\\s+", "\u0020");
         for (String s: map.keySet()) {
             str = str.replaceAll(s, map.get(s).toString());
         }
+        str = str.replaceAll("--", "");
         commands = str.split("\u0020");
     }
+/*
+ * For one argument function
+ */
+    protected boolean stackIsEmpty () {
+        if (0 == head.count()) {
+            System.err.println("Stack is empty.");
+            return true;
+        }
+        return false;
+    }
+/*
+ * For two arguments function
+ */
+    protected boolean stackHaveOneItem () {
+        if (1 == head.count()) {
+            System.err.println("Stack have one item only.");
+            return true;
+        }
+        return false;
+    }
+/*
+ * Main function
+ */
     byte exec () {
         byte res = 0;
         if (0 < commands.length) {
-            Calculator e = new Calculator();
+//            Calculator e = new Calculator();
+            Calculator e = null;
             switch (commands[0].toUpperCase()) {
                 case "#": break;
-                case "?": {
-                    System.out.println("You can use the following command:");
-                    System.out.println("EXIT");
-                    System.out.println("POP");
-                    System.out.println("PUSH");
-                    System.out.println("DEFINE <string>");
-                    System.out.println("DEFINE <string> <double>");
-                    System.out.println("PRINT");
-                    System.out.println("+");
-                    System.out.println("-");
-                    System.out.println("*");
-                    System.out.println("/");
-                } break;
                 case "EXIT": {
                     res = -1;
+                } break;
+                case "?": {
+                    e = new C_HELP();
                 } break;
                 case "POP": {
                     e = new C_POP();
@@ -77,7 +92,8 @@ public class Calculator {
                     System.err.println("Unknown command.");
                     res = 1;
             }
-            if (!"Calculator".equals(e.getClass().getName())) {
+//            if (!"Calculator".equals(e.getClass().getSimpleName())) {
+            if (!(null == e)) {
                 res = e.exec();
             }
         } else {
@@ -86,157 +102,168 @@ public class Calculator {
         }
         return res;
     }
-
+/*
+ * POP command
+ */
 }
  class C_POP extends Calculator {
      byte exec() {
-         if (0 == head.count()) {
-             System.err.println("Stack is empty.");
-             return 2;
-         } else {
-             double d = head.pop();
-             return 0;
-         }
+         if (stackIsEmpty()) return 2;
+         double d = head.pop();
+         return 0;
      }
  }
+/*
+ * PUSH command
+ */
 class C_PUSH extends Calculator {
     byte exec() {
         if (1 == commands.length) {
-            System.err.println("PUSH mast have argument.");
+            System.err.println("PUSH must have argument.");
             return 1;
         } else {
             try {
                 Double d = Double.parseDouble(commands[1]);
                 head.push(d);
-                return 0;
             } catch (NumberFormatException ex) {
                 System.err.println("PUSH have error argument.");
-                return 2;
+                return 1;
             }
         }
+        return 0;
     }
-}  class C_DEFINE extends Calculator {
+/*
+ * DEFINE command
+ */
+}
+class C_DEFINE extends Calculator {
     byte exec() {
-        int i = commands.length;
-        if (1 == i) {
-            System.err.println("DEFINE mast have arguments.");
+        if (1 == commands.length) {
+            System.err.println("DEFINE must have arguments.");
             return 1;
-        } else if (2 == i) {
-            if (0 == head.count()) {
-                System.err.println("Stack is empty.");
-                return 2;
-            } else {
-                String key = commands[1];
-                map.put(key, head.get());
-                return 0;
-            }
         } else {
-            String key = commands[1];
-            try {
-                Double d = Double.parseDouble(commands[2]);
-                map.put(key, d);
-                return 0;
-            } catch (NumberFormatException ex) {
+            if (Character.isDigit(commands[1].charAt(0))) {
                 System.err.println("DEFINE have error argument.");
-                return 2;
+                return 1;
             }
-        }
-    }
-}  class C_PRINT extends Calculator {
-    byte exec() {
-        if (0 == head.count()) {
-            System.err.println("Stack is empty.");
-            return 2;
-        } else {
-            System.out.println(head.get());
-            return 0;
-        }
-    }
-}  class C_QRT extends Calculator {
-    byte exec() {
-        if (0 == head.count()) {
-            System.err.println("Stack is empty.");
-            return 2;
-        } else {
-            double d = head.pop();
-            head.push(d * d);
-            return 0;
-        }
-    }
-}  class C_SQRT extends Calculator {
-    byte exec() {
-        if (0 == head.count()) {
-            System.err.println("Stack is empty.");
-            return 2;
-        } else {
-            double d = head.pop();
-            head.push(Math.sqrt(d));
-            return 0;
-        }
-    }
-}  class C_PLUS extends Calculator {
-    byte exec() {
-        long l = head.count();
-        if (0 == l) {
-            System.err.println("Stack is empty.");
-            return 2;
-        } else if (1 == l) {
-            System.err.println("Stack have only one item.");
-            return 2;
-        } else {
-            double d = head.pop();
-            head.push(head.pop() + d);
-            return 0;
-        }
-    }
-}  class C_MINUS extends Calculator {
-    byte exec() {
-        long l = head.count();
-        if (0 == l) {
-            System.err.println("Stack is empty.");
-            return 2;
-        } else if (1 == l) {
-            System.err.println("Stack have only one item.");
-            return 2;
-        } else {
-            double d = head.pop();
-            head.push(head.pop() - d);
-            return 0;
-        }
-    }
-}  class C_MULT extends Calculator {
-    byte exec() {
-        long l = head.count();
-        if (0 == l) {
-            System.err.println("Stack is empty.");
-            return 2;
-        } else if (1 == l) {
-            System.err.println("Stack have only one item.");
-            return 2;
-        } else {
-            double d = head.pop();
-            head.push(head.pop() * d);
-            return 0;
-        }
-    }
-}  class C_DIV extends Calculator {
-    byte exec() {
-        long l = head.count();
-        if (0 == l) {
-            System.err.println("Stack is empty.");
-            return 2;
-        } else if (1 == l) {
-            System.err.println("Stack have only one item.");
-            return 2;
-        } else {
-            if (0 == head.get()) {
-                System.err.println("Divide by zero.");
-                return 2;
+            String key = commands[1];
+            if (2 == commands.length) {
+                if (stackIsEmpty()) return 2;
+                map.put(key, head.get());
             } else {
-                double d = head.pop();
-                head.push(head.pop() + d);
-                return 0;
+                try {
+                    Double d = Double.parseDouble(commands[2]);
+                    map.put(key, d);
+                } catch (NumberFormatException ex) {
+                    System.err.println("DEFINE have error argument.");
+                    return 1;
+                }
             }
         }
+        return 0;
+    }
+}
+/*
+ * PRINT command
+ */
+class C_PRINT extends Calculator {
+    byte exec() {
+        if (stackIsEmpty()) return 2;
+        System.out.println(head.get());
+        return 0;
+    }
+}
+/*
+ * QRT command
+ */
+class C_QRT extends Calculator {
+    byte exec() {
+        if (stackIsEmpty()) return 2;
+        double d = head.pop();
+        head.push(d * d);
+        return 0;
+    }
+}
+/*
+ * SQRT command
+ */
+class C_SQRT extends Calculator {
+    byte exec() {
+        if (stackIsEmpty()) return 2;
+        if (0 > head.get()) {
+            System.err.println("SQRT works with positive numbers only.");
+            return 2;
+        }
+        double d = head.pop();
+        head.push(Math.sqrt(d));
+        return 0;
+    }
+}
+/*
+ * + command
+ */
+class C_PLUS extends Calculator {
+    byte exec() {
+        if (stackIsEmpty() || stackHaveOneItem()) return 2;
+        double d = head.pop();
+        head.push(head.pop() + d);
+        return 0;
+    }
+}
+/*
+ * - command
+ */
+class C_MINUS extends Calculator {
+    byte exec() {
+        if (stackIsEmpty() || stackHaveOneItem()) return 2;
+        double d = head.pop();
+        head.push(head.pop() - d);
+        return 0;
+    }
+}
+/*
+ * * command
+ */
+class C_MULT extends Calculator {
+    byte exec() {
+        if (stackIsEmpty() || stackHaveOneItem()) return 2;
+        double d = head.pop();
+        head.push(head.pop() * d);
+        return 0;
+    }
+}
+/*
+ * / command
+ */
+class C_DIV extends Calculator {
+    byte exec() {
+        if (stackIsEmpty() || stackHaveOneItem()) return 2;
+        if (0 == head.get()) {
+            System.err.println("Divide by zero.");
+            return 2;
+        } else {
+            double d = head.pop();
+            head.push(head.pop() / d);
+        }
+        return 0;
+    }
+}
+/*
+ * ? command
+ */
+class C_HELP extends Calculator {
+    byte exec() {
+        System.out.println("You can use the following command:");
+        System.out.println("EXIT");
+        System.out.println("POP");
+        System.out.println("PUSH");
+        System.out.println("DEFINE <string>");
+        System.out.println("DEFINE <string> <double>");
+        System.out.println("PRINT");
+        System.out.println("+");
+        System.out.println("-");
+        System.out.println("*");
+        System.out.println("/");
+        return 0;
     }
 }
