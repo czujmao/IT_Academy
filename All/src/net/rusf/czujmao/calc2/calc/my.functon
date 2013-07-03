@@ -1,0 +1,13 @@
+POP net.rusf.czujmao.calc2.calc.C_POP
+PUSH net.rusf.czujmao.calc2.calc.C_PUSH
+DEFINE net.rusf.czujmao.calc2.calc.C_DEFINE
+PRINT net.rusf.czujmao.calc2.calc.C_PRINT
+QRT net.rusf.czujmao.calc2.calc.C_QRT
+SQRT net.rusf.czujmao.calc2.calc.C_SQRT
++ net.rusf.czujmao.calc2.calc.C_PLUS
+- net.rusf.czujmao.calc2.calc.C_MINUS
+* net.rusf.czujmao.calc2.calc.C_MULT
+/ net.rusf.czujmao.calc2.calc.C_DIV
+# net.rusf.czujmao.calc2.calc.C_COMMENT
+HELP net.rusf.czujmao.calc2.calc.C_HELP
+EXIT net.rusf.czujmao.calc2.calc.C_EXIT

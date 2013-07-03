@@ -10,21 +10,7 @@ import java.util.Map;
 public class Calculator {
     protected static final Stack head = new Stack();
     protected static final Map<String, Double> defined = new HashMap<String, Double>();
-    protected static final Map<String, String> function = new HashMap<String, String>() {{
-        put("POP","net.rusf.czujmao.calc2.calc.C_POP");
-        put("PUSH","net.rusf.czujmao.calc2.calc.C_PUSH");
-        put("DEFINE","net.rusf.czujmao.calc2.calc.C_DEFINE");
-        put("PRINT","net.rusf.czujmao.calc2.calc.C_PRINT");
-        put("QRT","net.rusf.czujmao.calc2.calc.C_QRT");
-        put("SQRT","net.rusf.czujmao.calc2.calc.C_SQRT");
-        put("+","net.rusf.czujmao.calc2.calc.C_PLUS");
-        put("-","net.rusf.czujmao.calc2.calc.C_MINUS");
-        put("*","net.rusf.czujmao.calc2.calc.C_MULT");
-        put("/","net.rusf.czujmao.calc2.calc.C_DIV");
-        put("#","net.rusf.czujmao.calc2.calc.C_COMMENT");
-        put("HELP","net.rusf.czujmao.calc2.calc.C_HELP");
-        put("EXIT","net.rusf.czujmao.calc2.calc.C_EXIT");
-    }};
+    protected static final Map<String, String> function = new HashMap<String, String>();
     protected static String[] commands;
     private static Calculator i = null;
 /*
@@ -39,6 +25,7 @@ public class Calculator {
         if (i == null) {
             i = new Calculator();
         }
+
         return i;
     }
 /*
