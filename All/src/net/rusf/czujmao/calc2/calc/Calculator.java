@@ -1,5 +1,6 @@
 package net.rusf.czujmao.calc2.calc;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,11 +22,16 @@ public class Calculator {
 /*
 * "Constructor"
 */
-    static Calculator create() {
+    static Calculator create() throws IOException {
         if (i == null) {
             i = new Calculator();
         }
+        Resource myreader = new Resource();
+        String str = myreader.next();
+        while (str != null) {
+            str = str.replaceAll("\\s+", "\u0020");
 
+        }
         return i;
     }
 /*
