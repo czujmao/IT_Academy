@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class Calculator {
     protected static final Stack head = new Stack();
-    protected static final Map<String, Double> defined = new HashMap<String, Double>();
-    protected static final Map<String, String> function = new HashMap<String, String>();
+    protected static final Map<String, Double> defined = new HashMap<>();
+    protected static final Map<String, String> function = new HashMap<>();
     protected static String[] commands;
     private static Calculator i = null;
 /*
@@ -19,35 +19,9 @@ public class Calculator {
 */
     protected Calculator () {
     }
-/*
-* "Constructor"
-*/
-    static Calculator create() throws IOException {
-        if (i == null) {
-            i = new Calculator();
-        }
-        Resource myreader = new Resource();
-        String str = myreader.next();
-        while (str != null) {
-            str = str.replaceAll("\\s+", "\u0020");
-
-        }
-        return i;
-    }
-/*
-* Fill array "commands"
-*/
-    void init (String str) {
-        str = str.replaceAll("\\s+", "\u0020");
-        for (String s: defined.keySet()) {
-            str = str.replaceAll(s, defined.get(s).toString());
-        }
-        str = str.replaceAll("--", "");
-        commands = str.split("\u0020");
-    }
-/*
-* For one argument function
-*/
+    /*
+    * For one argument function
+    */
     protected boolean stackIsEmpty () {
         if (0 == head.count()) {
             System.err.println("Stack is empty.");
@@ -55,9 +29,9 @@ public class Calculator {
         }
         return false;
     }
-/*
-* For two arguments function
-*/
+    /*
+    * For two arguments function
+    */
     protected boolean stackHaveOneItem () {
         if (1 == head.count()) {
             System.err.println("Stack have one item only.");
@@ -66,35 +40,57 @@ public class Calculator {
         return false;
     }
 /*
+* "Constructor"
+*/
+    static Calculator create() throws IOException {
+        if (null == i) {
+            i = new Calculator();
+            Resource myreader = new Resource();
+            String str = myreader.next();
+            while (null != str) {
+                String[] funcs = str.replaceAll("\\s+", "\u0020").split("\u0020");
+                if (2 == funcs.length) {
+                    function.put(funcs[0], funcs[1]);
+                }
+            }
+        }
+        return i;
+    }
+/*
+* Fill array "commands"
+*/
+    void init (String str) {
+        for (String s: defined.keySet()) {
+            str = str.replaceAll(s, defined.get(s).toString());
+        }
+        commands = str.replaceAll("\\s+", "\u0020").replaceAll("--", "").split("\u0020");
+    }
+/*
 * Main function
 */
     byte exec () throws ClassNotFoundException, IllegalAccessException, InstantiationException {
-        byte res = 0;
-        if (0 < commands.length) {
-            Object e = null;
-            for (String s: function.keySet()) {
-                if (s.equals(commands[0].toUpperCase())) {
-                    e = Class.forName(function.get(s)).newInstance();
-                }
+        byte res;
+        Object e = null;
+        for (String s: function.keySet()) {
+            if (s.equals(commands[0].toUpperCase())) {
+                e = Class.forName(function.get(s)).newInstance();
+                break;
             }
-            if (null == e) {
-                System.err.println("Unknown command.");
-                res = 1;
-            } else {
-                res = ((Calculator) e).exec();
-            }
-        } else {
+        }
+        if (null == e) {
             System.err.println("Unknown command.");
             res = 1;
+        } else {
+            res = ((Calculator) e).exec();
         }
         return res;
     }
 }
-
+/////////////////////////////////////////////////////
 /*
 * POP command
 */
-class C_POP extends Calculator {
+final class C_POP extends Calculator {
     byte exec() {
         if (stackIsEmpty()) return 2;
         head.pop();
@@ -105,7 +101,7 @@ class C_POP extends Calculator {
 /*
 * PUSH command
 */
-class C_PUSH extends Calculator {
+final class C_PUSH extends Calculator {
     byte exec() {
         if (1 == commands.length) {
             System.err.println("PUSH must have argument.");
@@ -125,7 +121,7 @@ class C_PUSH extends Calculator {
 /*
 * DEFINE command
 */
-class C_DEFINE extends Calculator {
+final class C_DEFINE extends Calculator {
     byte exec() {
         if (1 == commands.length) {
             System.err.println("DEFINE must have arguments.");
@@ -156,7 +152,7 @@ class C_DEFINE extends Calculator {
 /*
 * PRINT command
 */
-class C_PRINT extends Calculator {
+final class C_PRINT extends Calculator {
     byte exec() {
         if (stackIsEmpty()) return 2;
         System.out.println(head.get());
@@ -167,7 +163,7 @@ class C_PRINT extends Calculator {
 /*
 * QRT command
 */
-class C_QRT extends Calculator {
+final class C_QRT extends Calculator {
     byte exec() {
         if (stackIsEmpty()) return 2;
         double d = head.pop();
@@ -179,7 +175,7 @@ class C_QRT extends Calculator {
 /*
 * SQRT command
 */
-class C_SQRT extends Calculator {
+final class C_SQRT extends Calculator {
     byte exec() {
         if (stackIsEmpty()) return 2;
         if (0 > head.get()) {
@@ -195,7 +191,7 @@ class C_SQRT extends Calculator {
 /*
 * + command
 */
-class C_PLUS extends Calculator {
+final class C_PLUS extends Calculator {
     byte exec() {
         if (stackIsEmpty() || stackHaveOneItem()) return 2;
         double d = head.pop();
@@ -207,7 +203,7 @@ class C_PLUS extends Calculator {
 /*
 * - command
 */
-class C_MINUS extends Calculator {
+final class C_MINUS extends Calculator {
     byte exec() {
         if (stackIsEmpty() || stackHaveOneItem()) return 2;
         double d = head.pop();
@@ -219,7 +215,7 @@ class C_MINUS extends Calculator {
 /*
 * * command
 */
-class C_MULT extends Calculator {
+final class C_MULT extends Calculator {
     byte exec() {
         if (stackIsEmpty() || stackHaveOneItem()) return 2;
         double d = head.pop();
@@ -231,7 +227,7 @@ class C_MULT extends Calculator {
 /*
 * / command
 */
-class C_DIV extends Calculator {
+final class C_DIV extends Calculator {
     byte exec() {
         if (stackIsEmpty() || stackHaveOneItem()) return 2;
         if (0 == head.get()) {
@@ -248,7 +244,7 @@ class C_DIV extends Calculator {
 /*
 * ? command
 */
-class C_HELP extends Calculator {
+final class C_HELP extends Calculator {
     byte exec() {
         System.out.println("You can use the following command:");
         System.out.println("EXIT");
@@ -268,7 +264,7 @@ class C_HELP extends Calculator {
 /*
 * # command
 */
-class C_COMMENT extends Calculator {
+final class C_COMMENT extends Calculator {
     byte exec() {
         return 0;
     }
@@ -276,7 +272,7 @@ class C_COMMENT extends Calculator {
 /*
 * # command
 */
-class C_EXIT extends Calculator {
+final class C_EXIT extends Calculator {
     byte exec() {
         return -1;
     }
