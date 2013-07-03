@@ -14,6 +14,23 @@ public class Calculator {
     protected static final Map<String, String> function = new HashMap<>();
     protected static String[] commands;
     private static Calculator i = null;
+    /*
+    * "Constructor"
+    */
+    static Calculator create() throws IOException {
+        if (null == i) {
+            i = new Calculator();
+            Resource myreader = new Resource();
+            String str = myreader.next();
+            while (null != str) {
+                String[] funcs = str.replaceAll("\\s+", "\u0020").split("\u0020");
+                if (2 == funcs.length) {
+                    function.put(funcs[0], funcs[1]);
+                }
+            }
+        }
+        return i;
+    }
 /*
 * Private calculator constructor for Singleton
 */
@@ -38,23 +55,6 @@ public class Calculator {
             return true;
         }
         return false;
-    }
-/*
-* "Constructor"
-*/
-    static Calculator create() throws IOException {
-        if (null == i) {
-            i = new Calculator();
-            Resource myreader = new Resource();
-            String str = myreader.next();
-            while (null != str) {
-                String[] funcs = str.replaceAll("\\s+", "\u0020").split("\u0020");
-                if (2 == funcs.length) {
-                    function.put(funcs[0], funcs[1]);
-                }
-            }
-        }
-        return i;
     }
 /*
 * Fill array "commands"
