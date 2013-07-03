@@ -92,7 +92,6 @@ public class Calculator {
                     System.err.println("Unknown command.");
                     res = 1;
             }
-// if (!"Calculator".equals(e.getClass().getSimpleName())) {
             if (!(null == e)) {
                 res = e.exec();
             }
