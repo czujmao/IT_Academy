@@ -31,7 +31,7 @@ public class Calc {
         for (String s: defined.keySet()) {
             str = str.replaceAll(s, defined.get(s).toString());
         }
-        commands = str.replaceAll("\\s+", "\u0020").replaceAll("--", "").split("\u0020");
+        commands = str.replaceAll("\\s+", "\u0020").replaceAll("--", "").replaceAll("#", "# ").split("\u0020");
     }
 /*
 * Main function
