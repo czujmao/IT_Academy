@@ -1,6 +1,10 @@
 package net.rusf.czujmao.calc3.engine;
 
 import java.io.IOException;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
 @interface FuncAnno {
     String name();
     String func();

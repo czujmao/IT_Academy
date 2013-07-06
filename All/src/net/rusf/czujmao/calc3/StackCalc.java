@@ -29,7 +29,13 @@ public class StackCalc {
             System.out.println("Welcome to Sack Calculator!");
             System.out.println("Use '?' for help.");
         }
-        Calc calc = Calc.create();
+
+        Calc calc = null;
+        try {
+            calc = Calc.create();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         Results result = Results.OK;
         do {
             calc.init(reader.next());
@@ -46,7 +52,7 @@ public class StackCalc {
                 }
             } catch (ClassNotFoundException | IllegalAccessException | InstantiationException ex) {
                 ex.printStackTrace();
-                result = Results.EXIT;;
+                result = Results.EXIT;
             }
         } while (Results.EXIT != result);
         try {

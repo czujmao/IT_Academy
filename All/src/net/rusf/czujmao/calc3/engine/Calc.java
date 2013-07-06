@@ -1,6 +1,7 @@
 package net.rusf.czujmao.calc3.engine;
 
 import java.io.IOException;
+import java.lang.annotation.Annotation;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,7 +19,7 @@ public class Calc {
 /*
 * "Constructor"
 */
-    public static Calc create() throws IOException {
+    public static Calc create() throws IOException, ClassNotFoundException {
         if (null == i) {
             i = new Calc();
         }
@@ -37,11 +38,9 @@ public class Calc {
 * Main function
 */
     public Results exec () throws ClassNotFoundException, IllegalAccessException, InstantiationException {
-        byte res;
-        Object e = null;
         String s = function.get(commands[0].toUpperCase());
         if (null != s) {
-            e = Class.forName(s).newInstance();
+            Object e = Class.forName(s).newInstance();
             return ((Calc) e).exec();
         } else {
             System.err.println("Syntax Error: Unknown command.");
@@ -74,14 +73,16 @@ boolean stackIsEmpty () {
 * Private calculator constructor for Singleton
 */
     protected Calc () throws IOException {
-        Resource myreader = new Resource();
         String pakageName = getClass().getPackage().getName();
-        String[] funcs = {""};
+        Annotation[] anno = null;
+        Resource myreader = new Resource();
         String str = myreader.next();
         while (null != str) {
-            funcs = str.replaceAll("\\s+", "\u0020").split("\u0020");
-            if (2 == funcs.length) {
-                function.put(funcs[0], pakageName + "." + funcs[1]);
+            try {
+                anno = Class.forName(pakageName + "." + str).getAnnotations();
+                function.put(((FuncAnno) anno[0]).func(), pakageName + "." + str);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
             str = myreader.next();
         }
