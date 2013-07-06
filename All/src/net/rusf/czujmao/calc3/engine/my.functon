@@ -1,0 +1,13 @@
+POP CalcPop
+PUSH CalcPush
+DEFINE CalcDefine
+PRINT CalcPrint
+QRT CalcQrt
+SQRT CalcSqrt
++ CalcPlus
+- CalcMinus
+* CalcMult
+/ CalcDiv
+# CalcComment
+HELP CalcHelp
+EXIT CalcExit
