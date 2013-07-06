@@ -30,26 +30,29 @@ public class StackCalc {
             System.out.println("Use '?' for help.");
         }
         Calc calc = Calc.create();
-        while (true) {
+        Results result = Results.OK;
+        do {
             calc.init(reader.next());
             try {
-                switch (calc.exec()) {
-                    case Results.OK: if (!fromFile) System.out.println("Ok"); break;
-                    case 1: System.err.println("Syntax error" + (fromFile?" in line " + reader.getCount():"")); break;
-                    case 2: System.err.println("Runtime error" + (fromFile?" in line " + reader.getCount():"")); break;
-                }
-                if ((-1 == res) || (res > 0 && fromFile)) {
-                    try {
-                        reader.closeReader();
-                    } catch (IOException e) {
-                        System.err.println("Close error!");
-                    }
-                    System.exit(0);
+                result = calc.exec();
+                switch (result) {
+                    case OK: if (!fromFile) System.out.println("Ok"); break;
+                    case ERROR: if (fromFile) {
+                                    System.err.println("Error in line " + reader.getCount());
+                                    result = Results.EXIT;
+                                } else {
+                                    break;
+                                }
                 }
             } catch (ClassNotFoundException | IllegalAccessException | InstantiationException ex) {
                 ex.printStackTrace();
-                System.exit(0);
+                result = Results.EXIT;;
             }
+        } while (Results.EXIT != result);
+        try {
+            reader.closeReader();
+        } catch (IOException e) {
+            System.err.println("Close error!");
         }
     }
 }

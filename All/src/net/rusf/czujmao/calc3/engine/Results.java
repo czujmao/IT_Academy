@@ -1,7 +1,7 @@
 package net.rusf.czujmao.calc3.engine;
 
 /**
- * It's main engine of calculator
+ * Returnable values
  */
 
 public enum Results {

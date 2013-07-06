@@ -6,10 +6,10 @@ import java.io.IOException;
 * POP command
 */
 final class CalcPop extends Calc {
-    byte exec() {
-        if (stackIsEmpty()) return 2;
+    public Results exec()  {
+        if (stackIsEmpty()) return Results.ERROR;
         head.pop();
-        return 0;
+        return Results.OK;
     }
     protected CalcPop() throws IOException {
     }
@@ -19,20 +19,20 @@ final class CalcPop extends Calc {
 * PUSH command
 */
 final class CalcPush extends Calc {
-    byte exec() {
+    public Results exec()  {
         if (1 == commands.length) {
-            System.err.println("PUSH must have argument.");
-            return 1;
+            System.err.println("Syntax Error: PUSH must have argument.");
+            return Results.ERROR;
         } else {
             try {
                 Double d = Double.parseDouble(commands[1]);
                 head.push(d);
             } catch (NumberFormatException ex) {
-                System.err.println("PUSH have error argument.");
-                return 1;
+                System.err.println("Syntax Error: PUSH have error argument.");
+                return Results.ERROR;
             }
         }
-        return 0;
+        return Results.OK;
     }
 
     protected CalcPush() throws IOException {
@@ -43,30 +43,30 @@ final class CalcPush extends Calc {
 * DEFINE command
 */
 final class CalcDefine extends Calc {
-    byte exec() {
+    public Results exec()  {
         if (1 == commands.length) {
-            System.err.println("DEFINE must have arguments.");
-            return 1;
+            System.err.println("Syntax Error: DEFINE must have arguments.");
+            return Results.ERROR;
         } else {
             if (Character.isDigit(commands[1].charAt(0))) {
-                System.err.println("DEFINE have error argument.");
-                return 1;
+                System.err.println("Syntax Error: DEFINE have error argument.");
+                return Results.ERROR;
             }
             String key = commands[1];
             if (2 == commands.length) {
-                if (stackIsEmpty()) return 2;
+                if (stackIsEmpty()) return Results.ERROR;
                 defined.put(key, head.peek());
             } else {
                 try {
                     Double d = Double.parseDouble(commands[2]);
                     defined.put(key, d);
                 } catch (NumberFormatException ex) {
-                    System.err.println("DEFINE have error argument.");
-                    return 1;
+                    System.err.println("Syntax Error: DEFINE have error argument.");
+                    return Results.ERROR;
                 }
             }
         }
-        return 0;
+        return Results.OK;
     }
 
     protected CalcDefine() throws IOException {
@@ -77,10 +77,10 @@ final class CalcDefine extends Calc {
 * PRINT command
 */
 final class CalcPrint extends Calc {
-    byte exec() {
-        if (stackIsEmpty()) return 2;
+    public Results exec()  {
+        if (stackIsEmpty()) return Results.ERROR;
         System.out.println(head.peek());
-        return 0;
+        return Results.OK;
     }
 
     protected CalcPrint() throws IOException {
@@ -91,11 +91,11 @@ final class CalcPrint extends Calc {
 * QRT command
 */
 final class CalcQrt extends Calc {
-    byte exec() {
-        if (stackIsEmpty()) return 2;
+    public Results exec()  {
+        if (stackIsEmpty()) return Results.ERROR;
         double d = head.pop();
         head.push(d * d);
-        return 0;
+        return Results.OK;
     }
 
     protected CalcQrt() throws IOException {
@@ -106,15 +106,15 @@ final class CalcQrt extends Calc {
 * SQRT command
 */
 final class CalcSqrt extends Calc {
-    byte exec() {
-        if (stackIsEmpty()) return 2;
+    public Results exec()  {
+        if (stackIsEmpty()) return Results.ERROR;
         if (0 > head.peek()) {
-            System.err.println("SQRT works with positive numbers only.");
-            return 2;
+            System.err.println("Runtime Error: SQRT works with positive numbers only.");
+            return Results.ERROR;
         }
         double d = head.pop();
         head.push(Math.sqrt(d));
-        return 0;
+        return Results.OK;
     }
 
     protected CalcSqrt() throws IOException {
@@ -125,11 +125,11 @@ final class CalcSqrt extends Calc {
 * + command
 */
 final class CalcPlus extends Calc {
-    byte exec() {
-        if (stackIsEmpty() || stackHaveOneItem()) return 2;
+    public Results exec()  {
+        if (stackIsEmpty() || stackHaveOneItem()) return Results.ERROR;
         double d = head.pop();
         head.push(head.pop() + d);
-        return 0;
+        return Results.OK;
     }
 
     protected CalcPlus() throws IOException {
@@ -140,11 +140,11 @@ final class CalcPlus extends Calc {
 * - command
 */
 final class CalcMinus extends Calc {
-    byte exec() {
-        if (stackIsEmpty() || stackHaveOneItem()) return 2;
+    public Results exec()  {
+        if (stackIsEmpty() || stackHaveOneItem()) return Results.ERROR;
         double d = head.pop();
         head.push(head.pop() - d);
-        return 0;
+        return Results.OK;
     }
 
     protected CalcMinus() throws IOException {
@@ -155,11 +155,11 @@ final class CalcMinus extends Calc {
 * * command
 */
 final class CalcMult extends Calc {
-    byte exec() {
-        if (stackIsEmpty() || stackHaveOneItem()) return 2;
+    public Results exec()  {
+        if (stackIsEmpty() || stackHaveOneItem()) return Results.ERROR;
         double d = head.pop();
         head.push(head.pop() * d);
-        return 0;
+        return Results.OK;
     }
 
     protected CalcMult() throws IOException {
@@ -170,16 +170,16 @@ final class CalcMult extends Calc {
 * / command
 */
 final class CalcDiv extends Calc {
-    byte exec() {
-        if (stackIsEmpty() || stackHaveOneItem()) return 2;
+    public Results exec()  {
+        if (stackIsEmpty() || stackHaveOneItem()) return Results.ERROR;
         if (0 == head.peek()) {
-            System.err.println("Divide by zero.");
-            return 2;
+            System.err.println("Runtime Error: Divide by zero.");
+            return Results.ERROR;
         } else {
             double d = head.pop();
             head.push(head.pop() / d);
         }
-        return 0;
+        return Results.OK;
     }
 
     protected CalcDiv() throws IOException {
@@ -190,7 +190,7 @@ final class CalcDiv extends Calc {
 * ? command
 */
 final class CalcHelp extends Calc {
-    byte exec() {
+    public Results exec()  {
         System.out.println("You can use the following command:");
         System.out.println("EXIT");
         System.out.println("POP");
@@ -202,7 +202,7 @@ final class CalcHelp extends Calc {
         System.out.println("-");
         System.out.println("*");
         System.out.println("/");
-        return 0;
+        return Results.OK;
     }
 
     protected CalcHelp() throws IOException {
@@ -213,8 +213,8 @@ final class CalcHelp extends Calc {
 * # command
 */
 final class CalcComment extends Calc {
-    byte exec() {
-        return 0;
+    public Results exec()  {
+        return Results.OK;
     }
 
     protected CalcComment() throws IOException {
@@ -225,8 +225,8 @@ final class CalcComment extends Calc {
 * # command
 */
 final class CalcExit extends Calc {
-    byte exec() {
-        return -1;
+    public Results exec()  {
+        return Results.EXIT;
     }
 
     protected CalcExit() throws IOException {

@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+* Stack calculator engine
+*/
+
 public class Calc {
     protected static final Stack head = new Stack();
     protected static final Map<String, Double> defined = new HashMap<>();
@@ -38,14 +42,11 @@ public class Calc {
         String s = function.get(commands[0].toUpperCase());
         if (null != s) {
             e = Class.forName(s).newInstance();
-        }
-        if (null == e) {
-            System.err.println("Unknown command.");
-            res = 1;
+            return ((Calc) e).exec();
         } else {
-            res = ((Calc) e).exec();
+            System.err.println("Syntax Error: Unknown command.");
+            return Results.ERROR;
         }
-        return res;
     }
 ///////////////////////////////////////////////////////////
 /*
@@ -53,7 +54,7 @@ public class Calc {
 */
 boolean stackIsEmpty () {
     if (0 == head.count()) {
-        System.err.println("Stack is empty.");
+        System.err.println("Runtime Error: Stack is empty.");
         return true;
     }
     return false;
@@ -63,7 +64,7 @@ boolean stackIsEmpty () {
     */
     boolean stackHaveOneItem () {
         if (1 == head.count()) {
-            System.err.println("Stack have one item only.");
+            System.err.println("Runtime Error: Stack have one item only.");
             return true;
         }
         return false;
@@ -75,9 +76,10 @@ boolean stackIsEmpty () {
     protected Calc () throws IOException {
         Resource myreader = new Resource();
         String pakageName = getClass().getPackage().getName();
+        String[] funcs = {""};
         String str = myreader.next();
         while (null != str) {
-            String[] funcs = str.replaceAll("\\s+", "\u0020").split("\u0020");
+            funcs = str.replaceAll("\\s+", "\u0020").split("\u0020");
             if (2 == funcs.length) {
                 function.put(funcs[0], pakageName + "." + funcs[1]);
             }
