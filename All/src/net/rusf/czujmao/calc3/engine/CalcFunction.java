@@ -9,7 +9,9 @@ import java.io.IOException;
 /*
 * POP command
 */
+@FuncAnno( name = "CalcPop", func = "POP")
 final class CalcPop extends Calc {
+    @Override
     public Results exec()  {
         if (stackIsEmpty()) return Results.ERROR;
         head.pop();
@@ -22,7 +24,9 @@ final class CalcPop extends Calc {
 /*
 * PUSH command
 */
+@FuncAnno( name = "CalcPush", func = "PUSH")
 final class CalcPush extends Calc {
+    @Override
     public Results exec()  {
         if (1 == commands.length) {
             System.err.println("Syntax Error: PUSH must have argument.");
@@ -46,7 +50,9 @@ final class CalcPush extends Calc {
 /*
 * DEFINE command
 */
+@FuncAnno( name = "CalcDefine", func = "DEFINE")
 final class CalcDefine extends Calc {
+    @Override
     public Results exec()  {
         if (1 == commands.length) {
             System.err.println("Syntax Error: DEFINE must have arguments.");
@@ -80,7 +86,9 @@ final class CalcDefine extends Calc {
 /*
 * PRINT command
 */
+@FuncAnno( name = "CalcPrint", func = "PRINT")
 final class CalcPrint extends Calc {
+    @Override
     public Results exec()  {
         if (stackIsEmpty()) return Results.ERROR;
         System.out.println(head.peek());
@@ -94,7 +102,9 @@ final class CalcPrint extends Calc {
 /*
 * QRT command
 */
+@FuncAnno( name = "CalcQrt", func = "QRT")
 final class CalcQrt extends Calc {
+    @Override
     public Results exec()  {
         if (stackIsEmpty()) return Results.ERROR;
         double d = head.pop();
@@ -109,7 +119,9 @@ final class CalcQrt extends Calc {
 /*
 * SQRT command
 */
+@FuncAnno( name = "CalcSqrt", func = "SQRT")
 final class CalcSqrt extends Calc {
+    @Override
     public Results exec()  {
         if (stackIsEmpty()) return Results.ERROR;
         if (0 > head.peek()) {
@@ -128,7 +140,9 @@ final class CalcSqrt extends Calc {
 /*
 * + command
 */
+@FuncAnno( name = "CalcPlus", func = "+")
 final class CalcPlus extends Calc {
+    @Override
     public Results exec()  {
         if (stackIsEmpty() || stackHaveOneItem()) return Results.ERROR;
         double d = head.pop();
@@ -143,7 +157,9 @@ final class CalcPlus extends Calc {
 /*
 * - command
 */
+@FuncAnno( name = "CalcMinus", func = "-")
 final class CalcMinus extends Calc {
+    @Override
     public Results exec()  {
         if (stackIsEmpty() || stackHaveOneItem()) return Results.ERROR;
         double d = head.pop();
@@ -158,7 +174,9 @@ final class CalcMinus extends Calc {
 /*
 * * command
 */
+@FuncAnno( name = "CalcMult", func = "*")
 final class CalcMult extends Calc {
+    @Override
     public Results exec()  {
         if (stackIsEmpty() || stackHaveOneItem()) return Results.ERROR;
         double d = head.pop();
@@ -173,7 +191,9 @@ final class CalcMult extends Calc {
 /*
 * / command
 */
+@FuncAnno( name = "CalcDiv", func = "/")
 final class CalcDiv extends Calc {
+    @Override
     public Results exec()  {
         if (stackIsEmpty() || stackHaveOneItem()) return Results.ERROR;
         if (0 == head.peek()) {
@@ -193,7 +213,9 @@ final class CalcDiv extends Calc {
 /*
 * ? command
 */
+@FuncAnno( name = "CalcHelp", func = "HELP")
 final class CalcHelp extends Calc {
+    @Override
     public Results exec()  {
         System.out.println("You can use the following command:");
         System.out.println("EXIT");
@@ -216,7 +238,9 @@ final class CalcHelp extends Calc {
 /*
 * # command
 */
+@FuncAnno( name = "CalcComment", func = "#")
 final class CalcComment extends Calc {
+    @Override
     public Results exec()  {
         return Results.OK;
     }
@@ -228,7 +252,9 @@ final class CalcComment extends Calc {
 /*
 * # command
 */
+@FuncAnno( name = "CalcExit", func = "EXIT")
 final class CalcExit extends Calc {
+    @Override
     public Results exec()  {
         return Results.EXIT;
     }
