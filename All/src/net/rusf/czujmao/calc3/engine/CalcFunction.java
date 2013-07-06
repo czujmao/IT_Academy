@@ -1,6 +1,10 @@
 package net.rusf.czujmao.calc3.engine;
 
 import java.io.IOException;
+@interface FuncAnno {
+    String name();
+    String func();
+}
 
 /*
 * POP command
