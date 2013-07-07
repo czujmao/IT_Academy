@@ -3,6 +3,8 @@ package net.rusf.czujmao.text;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Comparator;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class TextCalc {
@@ -18,9 +20,9 @@ public class TextCalc {
             }
         } else {
             MyReader tmpreader =  new MyReader();
-            TextCalc.printFileError(str);
+            System.out.print("Enter file name: ");
             try {
-                str = tmpreader.next();
+                str = tmpreader.nextLine();
                 reader = new MyReader(str);
             } catch (FileNotFoundException ex) {
                 TextCalc.printFileError(str);
@@ -35,18 +37,57 @@ public class TextCalc {
             }
         }
         if (null == reader) System.exit(0);
+        HashMap<String, Integer> words = new HashMap<String, Integer>();
+        ValueComparator vc =  new ValueComparator(words);
 ///////////////////////////////////////////////////////////
-//        TreeMap<String word, Long count> =
+/*
+        long startTime = System.currentTimeMillis();
+
         do {
             try {
-                str = reader.next();
+                str = reader.nextLine();
                 if (null == str) break;
-
+                if (str.isEmpty()) continue;
+                WordsCount.countByString(words, str);
             } catch (IOException e) {
                 TextCalc.printFileError(str);
                 break;
             }
         } while (true);
+
+        System.out.println("Time for reading file:" + (System.currentTimeMillis() - startTime));
+
+        TreeMap<String, Integer> sorted_words = new TreeMap<String, Integer>(vc);
+        System.out.println("unsorted map: " + words);
+
+        sorted_words.putAll(words);
+
+        System.out.println("results: " + sorted_words);
+*/
+///////////////////////////////////////////////////////////
+
+//        long startTime = System.currentTimeMillis();
+        String word = "";
+        do {
+            try {
+                int ch = reader.nextChar();
+                if (-1 == ch) break;
+                word = WordsCount.countByChar(words, word, (char)ch);
+            } catch (IOException e) {
+                TextCalc.printFileError(str);
+                break;
+            }
+        } while (true);
+
+//        System.out.println("Time for reading file:" + (System.currentTimeMillis() - startTime));
+
+        TreeMap<String, Integer> sorted_words = new TreeMap<String, Integer>(vc);
+//        System.out.println("unsorted map: " + words);
+        sorted_words.putAll(words);
+//        System.out.println("results: " + sorted_words);
+        for (Map.Entry<String, Integer> e : sorted_words.entrySet())
+            System.out.println(e.getKey() + "," + e.getValue());
+
 ///////////////////////////////////////////////////////////
         try {
             reader.closeReader();
@@ -54,7 +95,25 @@ public class TextCalc {
             e.printStackTrace();
         }
     }
+
     private static void printFileError(String str) {
         System.out.println("File '" + str + "' read error!");
+    }
+}
+
+class ValueComparator implements Comparator<String> {
+
+    Map<String, Integer> base;
+    public ValueComparator(Map<String, Integer> base) {
+        this.base = base;
+    }
+
+    // Note: this comparator imposes orderings that are inconsistent with equals.
+    public int compare(String a, String b) {
+        if (base.get(a) >= base.get(b)) {
+            return -1;
+        } else {
+            return 1;
+        } // returning 0 would merge keys
     }
 }

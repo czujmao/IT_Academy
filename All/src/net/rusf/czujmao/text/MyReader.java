@@ -26,10 +26,9 @@ public class MyReader {
         Inner = new BufferedReader(new InputStreamReader(new FileInputStream(new File(fileName).getAbsoluteFile())));
     }
     /*
-    * Return next not-empty string
-    * If it have eof or std input error - return "EXIT" for normal exit
+    * Return next triming line
     */
-    public String next() throws IOException {
+    public String nextLine() throws IOException {
         String str;
         try {
             str = Inner.readLine();
@@ -42,9 +41,20 @@ public class MyReader {
         }
     }
     /*
+    * Return next character
+    */
+    public int nextChar() throws IOException {
+        try {
+            return Inner.read();
+        } catch (IOException ex) {
+            return -1;
+        }
+    }
+    /*
     * Close file
     */
     public void closeReader() throws IOException {
         Inner.close();
     }
+
 }
