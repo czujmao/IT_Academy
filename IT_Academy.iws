@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7eae934c-a868-42c4-8393-d1de33fa27fa" name="Default" comment="TextCalc first version complite">
+    <list default="true" id="7eae934c-a868-42c4-8393-d1de33fa27fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IT_Academy.iws" afterPath="$PROJECT_DIR$/IT_Academy.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyReader.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyWriter.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/TextCalc.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/TextCalc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/WordsCount.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/WordsCount.java" />
     </list>
     <ignored path="IT_Academy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373206185927" ignored="false" />
+    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373206734794" ignored="false" />
     <file path="/Game.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372431641388" ignored="false" />
     <file path="/Clac.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372433373877" ignored="false" />
     <file path="/Stack.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373068847212" ignored="false" />
@@ -721,12 +717,16 @@
       <created>1373197369056</created>
       <updated>1373197369056</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="TextCalc first version complite">
+      <created>1373206742975</created>
+      <updated>1373206742975</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1873" height="1205" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
