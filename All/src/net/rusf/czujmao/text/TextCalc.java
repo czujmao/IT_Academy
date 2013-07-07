@@ -42,34 +42,6 @@ public class TextCalc {
         if (null == reader) System.exit(0);
         HashMap<String, Integer> words = new HashMap<String, Integer>();
         ValueComparator vc =  new ValueComparator(words);
-///////////////////////////////////////////////////////////
-/*
-        long startTime = System.currentTimeMillis();
-
-        do {
-            try {
-                str = reader.nextLine();
-                if (null == str) break;
-                if (str.isEmpty()) continue;
-                WordsCount.countByString(words, str);
-            } catch (IOException e) {
-                TextCalc.printFileError(str);
-                break;
-            }
-        } while (true);
-
-        System.out.println("Time for reading file:" + (System.currentTimeMillis() - startTime));
-
-        TreeMap<String, Integer> sorted_words = new TreeMap<String, Integer>(vc);
-        System.out.println("unsorted map: " + words);
-
-        sorted_words.putAll(words);
-
-        System.out.println("results: " + sorted_words);
-*/
-///////////////////////////////////////////////////////////
-
-//        long startTime = System.currentTimeMillis();
         String word = "";
         do {
             try {
@@ -82,12 +54,8 @@ public class TextCalc {
             }
         } while (true);
 
-//        System.out.println("Time for reading file:" + (System.currentTimeMillis() - startTime));
-
         TreeMap<String, Integer> sorted_words = new TreeMap<String, Integer>(vc);
-//        System.out.println("unsorted map: " + words);
         sorted_words.putAll(words);
-//        System.out.println("results: " + sorted_words);
         try {
             for (Map.Entry<String, Integer> e : sorted_words.entrySet()) {
                 writer.writeString(e.getKey() + "," + e.getValue());
@@ -95,8 +63,6 @@ public class TextCalc {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
-///////////////////////////////////////////////////////////
         try {
             reader.closeReader();
             writer.closeWriter();
@@ -110,6 +76,9 @@ public class TextCalc {
     }
 }
 
+/*
+ * for sotring TreeMap
+ */
 class ValueComparator implements Comparator<String> {
 
     Map<String, Integer> base;
