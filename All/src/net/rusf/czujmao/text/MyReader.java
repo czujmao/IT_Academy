@@ -23,7 +23,8 @@ public class MyReader {
         if (!f.canRead()) {
             throw new FileNotFoundException();
         }
-        inner = new BufferedReader(new InputStreamReader(new FileInputStream(new File(fileName).getAbsoluteFile())));
+//        inner = new BufferedReader(new InputStreamReader(new FileInputStream(new File(fileName).getAbsoluteFile())));
+        inner = new BufferedReader(new InputStreamReader(new FileInputStream(f)));
     }
     /*
     * Return next triming line

@@ -16,7 +16,7 @@ public class WordsCount {
     }
 
     private static void addWord(HashMap<String, Integer> words, String word) {
-        Integer count = words.get((Object) word);
+        Integer count = words.get(word);
         if (null == count) {
             count = 0;
         }

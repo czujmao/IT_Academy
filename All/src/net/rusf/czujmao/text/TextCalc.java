@@ -18,50 +18,63 @@ public class TextCalc {
                 reader = new MyReader(str);
                 writer = new MyWriter(str + ".cvs");
             } catch (FileNotFoundException ex) {
-                TextCalc.printFileError(str);
+                TextCalc.printFileError(str, OperationType.READ);
+                System.exit(1);
+            } catch (SecurityException ex) {
+                TextCalc.printFileError(str, OperationType.WRITE);
+                System.exit(1);
             }
         } else {
             MyReader tmpreader =  new MyReader();
             System.out.print("Enter file name: ");
             try {
-                str = tmpreader.nextLine();
+                try {
+                    str = tmpreader.nextLine();
+                } catch (IOException ex) {
+                    System.out.println("Input error");
+                    System.exit(1);
+                }
                 reader = new MyReader(str);
                 writer = new MyWriter(str + ".cvs");
             } catch (FileNotFoundException ex) {
-                TextCalc.printFileError(str);
-            } catch (IOException ex) {
-                TextCalc.printFileError(str);
+                TextCalc.printFileError(str, OperationType.READ);
+                System.exit(1);
+            } catch (SecurityException ex) {
+                TextCalc.printFileError(str, OperationType.WRITE);
+                System.exit(1);
             } finally {
                 try {
                     tmpreader.closeReader();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
                 }
             }
         }
-        if (null == reader) System.exit(0);
-        HashMap<String, Integer> words = new HashMap<String, Integer>();
+        HashMap<String, Integer> words = new HashMap<>();
         ValueComparator vc =  new ValueComparator(words);
         String word = "";
         do {
             try {
                 int ch = reader.nextChar();
-                if (-1 == ch) break;
+                if (-1 == ch) {
+                    WordsCount.countByChar(words, word, ' ');
+                    break;
+                }
                 word = WordsCount.countByChar(words, word, (char)ch);
-            } catch (IOException e) {
-                TextCalc.printFileError(str);
+            } catch (IOException | NullPointerException ex) {
+                TextCalc.printFileError(str, OperationType.READ);
                 break;
             }
         } while (true);
 
-        TreeMap<String, Integer> sorted_words = new TreeMap<String, Integer>(vc);
+        TreeMap<String, Integer> sorted_words = new TreeMap<>(vc);
         sorted_words.putAll(words);
         try {
             for (Map.Entry<String, Integer> e : sorted_words.entrySet()) {
                 writer.writeString(e.getKey() + "," + e.getValue());
             }
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException | NullPointerException ex) {
+            TextCalc.printFileError(str, OperationType.WRITE);
         }
         try {
             reader.closeReader();
@@ -71,8 +84,11 @@ public class TextCalc {
         }
     }
 
-    private static void printFileError(String str) {
-        System.out.println("File '" + str + "' read error!");
+    public enum OperationType {
+        READ, WRITE
+    }
+    private static void printFileError(String str, OperationType type) {
+        System.out.println("File '" + str + ((type == OperationType.READ)?"":".cvs") + "' " + ((type == OperationType.READ)?"read":"write") + " error!");
     }
 }
 

@@ -4,12 +4,12 @@ import java.io.*;
 
 public class MyWriter {
     private BufferedWriter outer;
-    MyWriter (String fileName) {
+    MyWriter (String fileName) throws SecurityException {
         try {
             outer = new BufferedWriter(new FileWriter(fileName));
 
         } catch (IOException ex) {
-            ex.printStackTrace();
+            throw new SecurityException();
         }
     }
     public void writeString(String string) throws IOException {
