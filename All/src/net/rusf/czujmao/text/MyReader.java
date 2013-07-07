@@ -8,12 +8,12 @@ import java.io.*;
  */
 
 public class MyReader {
-    private BufferedReader Inner;
+    private BufferedReader inner;
     /*
     * Reader for StdIO
     */
     MyReader () {
-        Inner = new BufferedReader(new InputStreamReader(System.in));
+        inner = new BufferedReader(new InputStreamReader(System.in));
     }
     /*
     * Reader for file
@@ -23,7 +23,7 @@ public class MyReader {
         if (!f.canRead()) {
             throw new FileNotFoundException();
         }
-        Inner = new BufferedReader(new InputStreamReader(new FileInputStream(new File(fileName).getAbsoluteFile())));
+        inner = new BufferedReader(new InputStreamReader(new FileInputStream(new File(fileName).getAbsoluteFile())));
     }
     /*
     * Return next triming line
@@ -31,7 +31,7 @@ public class MyReader {
     public String nextLine() throws IOException {
         String str;
         try {
-            str = Inner.readLine();
+            str = inner.readLine();
             if (null != str) {
                 str = str.trim();
             }
@@ -45,7 +45,7 @@ public class MyReader {
     */
     public int nextChar() throws IOException {
         try {
-            return Inner.read();
+            return inner.read();
         } catch (IOException ex) {
             return -1;
         }
@@ -54,7 +54,6 @@ public class MyReader {
     * Close file
     */
     public void closeReader() throws IOException {
-        Inner.close();
+        inner.close();
     }
-
 }

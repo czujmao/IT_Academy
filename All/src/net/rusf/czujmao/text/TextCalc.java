@@ -11,10 +11,12 @@ public class TextCalc {
     public static void main(String[] args) {
         String str = "";
         MyReader reader = null;
+        MyWriter writer = null;
         if (0 < args.length) {
             try {
                 str = args[0];
                 reader = new MyReader(str);
+                writer = new MyWriter(str + ".cvs");
             } catch (FileNotFoundException ex) {
                 TextCalc.printFileError(str);
             }
@@ -24,6 +26,7 @@ public class TextCalc {
             try {
                 str = tmpreader.nextLine();
                 reader = new MyReader(str);
+                writer = new MyWriter(str + ".cvs");
             } catch (FileNotFoundException ex) {
                 TextCalc.printFileError(str);
             } catch (IOException ex) {
@@ -85,12 +88,18 @@ public class TextCalc {
 //        System.out.println("unsorted map: " + words);
         sorted_words.putAll(words);
 //        System.out.println("results: " + sorted_words);
-        for (Map.Entry<String, Integer> e : sorted_words.entrySet())
-            System.out.println(e.getKey() + "," + e.getValue());
+        try {
+            for (Map.Entry<String, Integer> e : sorted_words.entrySet()) {
+                writer.writeString(e.getKey() + "," + e.getValue());
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
 ///////////////////////////////////////////////////////////
         try {
             reader.closeReader();
+            writer.closeWriter();
         } catch (IOException e) {
             e.printStackTrace();
         }
