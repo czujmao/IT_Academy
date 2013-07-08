@@ -4,14 +4,12 @@ import java.io.*;
 
 public class MyWriter {
     private BufferedWriter outer;
-    MyWriter (String fileName) throws SecurityException {
-        try {
-            outer = new BufferedWriter(new FileWriter(fileName));
-
-        } catch (IOException ex) {
-            throw new SecurityException();
-        }
+    MyWriter (String fileName) throws IOException {
+        outer = new BufferedWriter(new FileWriter(fileName));
     }
+    /*
+    * Write one string and new-line-code into file
+    */
     public void writeString(String string) throws IOException {
         outer.write(string);
         outer.newLine();

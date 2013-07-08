@@ -13,14 +13,16 @@ public class TextCalc {
         MyReader reader = null;
         MyWriter writer = null;
         if (0 < args.length) {
+            str = args[0];
             try {
-                str = args[0];
                 reader = new MyReader(str);
-                writer = new MyWriter(str + ".cvs");
             } catch (FileNotFoundException ex) {
                 TextCalc.printFileError(str, OperationType.READ);
                 System.exit(1);
-            } catch (SecurityException ex) {
+            }
+            try {
+                writer = new MyWriter(str + ".cvs");
+            } catch (IOException ex) {
                 TextCalc.printFileError(str, OperationType.WRITE);
                 System.exit(1);
             }
@@ -34,14 +36,18 @@ public class TextCalc {
                     System.out.println("Input error");
                     System.exit(1);
                 }
-                reader = new MyReader(str);
-                writer = new MyWriter(str + ".cvs");
-            } catch (FileNotFoundException ex) {
-                TextCalc.printFileError(str, OperationType.READ);
-                System.exit(1);
-            } catch (SecurityException ex) {
-                TextCalc.printFileError(str, OperationType.WRITE);
-                System.exit(1);
+                try {
+                    reader = new MyReader(str);
+                } catch (FileNotFoundException ex) {
+                    TextCalc.printFileError(str, OperationType.READ);
+                    System.exit(1);
+                }
+                try {
+                    writer = new MyWriter(str + ".cvs");
+                } catch (IOException ex) {
+                    TextCalc.printFileError(str, OperationType.WRITE);
+                    System.exit(1);
+                }
             } finally {
                 try {
                     tmpreader.closeReader();
