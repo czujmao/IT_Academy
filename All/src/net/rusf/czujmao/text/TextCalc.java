@@ -16,15 +16,13 @@ public class TextCalc {
             str = args[0];
             try {
                 reader = new MyReader(str);
+                try {
+                    writer = new MyWriter(str + ".cvs");
+                } catch (IOException ex) {
+                    TextCalc.printFileError(str, OperationType.WRITE);
+                }
             } catch (FileNotFoundException ex) {
                 TextCalc.printFileError(str, OperationType.READ);
-                System.exit(1);
-            }
-            try {
-                writer = new MyWriter(str + ".cvs");
-            } catch (IOException ex) {
-                TextCalc.printFileError(str, OperationType.WRITE);
-                System.exit(1);
             }
         } else {
             MyReader tmpreader =  new MyReader();
@@ -32,21 +30,18 @@ public class TextCalc {
             try {
                 try {
                     str = tmpreader.nextLine();
+                    try {
+                        reader = new MyReader(str);
+                        try {
+                            writer = new MyWriter(str + ".cvs");
+                        } catch (IOException ex) {
+                            TextCalc.printFileError(str, OperationType.WRITE);
+                        }
+                    } catch (FileNotFoundException ex) {
+                        TextCalc.printFileError(str, OperationType.READ);
+                    }
                 } catch (IOException ex) {
                     System.out.println("Input error");
-                    System.exit(1);
-                }
-                try {
-                    reader = new MyReader(str);
-                } catch (FileNotFoundException ex) {
-                    TextCalc.printFileError(str, OperationType.READ);
-                    System.exit(1);
-                }
-                try {
-                    writer = new MyWriter(str + ".cvs");
-                } catch (IOException ex) {
-                    TextCalc.printFileError(str, OperationType.WRITE);
-                    System.exit(1);
                 }
             } finally {
                 try {
@@ -56,35 +51,37 @@ public class TextCalc {
                 }
             }
         }
-        HashMap<String, Integer> words = new HashMap<>();
-        ValueComparator vc =  new ValueComparator(words);
-        String word = "";
-        do {
-            try {
-                int ch = reader.nextChar();
-                if (-1 == ch) {
-                    WordsCount.countByChar(words, word, ' ');
+        if (null != reader && null != writer) {
+            HashMap<String, Integer> words = new HashMap<>();
+            ValueComparator vc =  new ValueComparator(words);
+            String word = "";
+            do {
+                try {
+                    int ch = reader.nextChar();
+                    if (-1 == ch) {
+                        WordsCount.countByChar(words, word, ' ');
+                        break;
+                    }
+                    word = WordsCount.countByChar(words, word, (char)ch);
+                } catch (IOException | NullPointerException ex) {
+                    TextCalc.printFileError(str, OperationType.READ);
                     break;
                 }
-                word = WordsCount.countByChar(words, word, (char)ch);
-            } catch (IOException | NullPointerException ex) {
-                TextCalc.printFileError(str, OperationType.READ);
-                break;
-            }
-        } while (true);
+            } while (true);
 
-        TreeMap<String, Integer> sorted_words = new TreeMap<>(vc);
-        sorted_words.putAll(words);
-        try {
-            for (Map.Entry<String, Integer> e : sorted_words.entrySet()) {
-                writer.writeString(e.getKey() + "," + e.getValue());
+            TreeMap<String, Integer> sorted_words = new TreeMap<>(vc);
+            sorted_words.putAll(words);
+            try {
+                for (Map.Entry<String, Integer> e : sorted_words.entrySet()) {
+                    writer.writeString(e.getKey() + "," + e.getValue());
+                }
+            } catch (IOException | NullPointerException ex) {
+                TextCalc.printFileError(str, OperationType.WRITE);
             }
-        } catch (IOException | NullPointerException ex) {
-            TextCalc.printFileError(str, OperationType.WRITE);
         }
         try {
-            reader.closeReader();
-            writer.closeWriter();
+            if (null != reader) reader.closeReader();
+            if (null != writer) writer.closeWriter();
         } catch (IOException e) {
             e.printStackTrace();
         }
