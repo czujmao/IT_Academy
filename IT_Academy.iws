@@ -2,24 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eae934c-a868-42c4-8393-d1de33fa27fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/GetIndex.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/GetIndex.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IT_Academy.iws" afterPath="$PROJECT_DIR$/IT_Academy.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java" />
     </list>
     <ignored path="IT_Academy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373503847971" ignored="false" />
+    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373694476074" ignored="false" />
     <file path="/Game.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372431641388" ignored="false" />
     <file path="/Clac.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372433373877" ignored="false" />
     <file path="/Stack.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373068847212" ignored="false" />
     <file path="/Calc.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373086183761" ignored="false" />
-    <file path="/FileReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443736837" ignored="false" />
+    <file path="/FileReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373694778710" ignored="false" />
     <file path="/StdReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372437778992" ignored="false" />
     <file path="/FlReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372438334465" ignored="false" />
     <file path="/MyReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373202193237" ignored="false" />
     <file path="/Exec.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372443118674" ignored="false" />
     <file path="/Calculator.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373071440567" ignored="false" />
-    <file path="/fragment.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373458199227" ignored="false" />
+    <file path="/fragment.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373694808468" ignored="false" />
     <file path="/test.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372854759486" ignored="false" />
     <file path="/MyField.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372854878986" ignored="false" />
     <file path="/Resource.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373069107167" ignored="false" />
@@ -34,6 +37,10 @@
     <file path="/WordsCount.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373193519820" ignored="false" />
     <file path="/MyWriter.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373297677942" ignored="false" />
     <file path="/GetIndex.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373591814344" ignored="false" />
+    <file path="/ThreadedEchoServer.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373687679828" ignored="false" />
+    <file path="/CMWS.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373695224443" ignored="false" />
+    <file path="/FileRader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373693525637" ignored="false" />
+    <file path="/Constants.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373694614243" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,23 +91,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java" line="67" class="net.rusf.czujmao.tests.ThreadedEchoHandler" package="net.rusf.czujmao.tests">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -111,32 +102,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TextCalc.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/TextCalc.java">
+      <file leaf-file-name="FileReader.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="22" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+            <state line="37" column="56" selection-start="1460" selection-end="1460" vertical-scroll-proportion="1.3461539">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetIndex.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/GetIndex.java">
+      <file leaf-file-name="CMWS.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="2885" selection-end="2885" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1425#1433#0" expanded="true" />
-                <element signature="e#1490#1498#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadedEchoServer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="13" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0609319">
+            <state line="103" column="0" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,28 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyWriter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyWriter.java">
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="34" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="28" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordsCount.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/WordsCount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="41" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
+            <state line="4" column="40" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,10 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/engine/Results.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/engine/CalcFunction.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/my.functon" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/engine/Resource.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/StackCalc.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/engine/Calc.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/CounterTester.java" />
@@ -208,16 +164,20 @@
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyWriter.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyReader.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/text/TextCalc.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/GetIndex.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileRader.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-4" />
     <option name="y" value="-4" />
-    <option name="width" value="1374" />
-    <option name="height" value="744" />
+    <option name="width" value="1288" />
+    <option name="height" value="1004" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -245,6 +205,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -331,12 +294,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TextCalc.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -357,16 +316,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
+              <option name="myItemId" value="HTTPserver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,23 +363,7 @@
       <recent name="C:\Users\user\IdeaProjects\IT_Academy new\All\src\net\rusf\czujmao" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GetIndex">
-    <configuration default="false" name="CounterTester" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="net.rusf.czujmao.tests.CounterTester" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="All" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.CMWS">
     <configuration default="false" name="NewTest" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="net.rusf.czujmao.tests.NewTest" />
       <option name="VM_PARAMETERS" />
@@ -474,12 +414,40 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="All" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="ThreadedEchoServer" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="net.rusf.czujmao.tests.ThreadedEchoServer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="All" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CMWS" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="net.rusf.czujmao.HTTPserver.CMWS" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -612,19 +580,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.StackCalc" />
-      <item index="1" class="java.lang.String" itemvalue="Application.CounterTester" />
-      <item index="2" class="java.lang.String" itemvalue="Application.NewTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TextCalc" />
-      <item index="4" class="java.lang.String" itemvalue="Application.GetIndex" />
-      <item index="5" class="java.lang.String" itemvalue="Application.ThreadedEchoServer" />
+      <item index="1" class="java.lang.String" itemvalue="Application.NewTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TextCalc" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GetIndex" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ThreadedEchoServer" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CMWS" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.GetIndex" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ThreadedEchoServer" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TextCalc" />
-        <item index="3" class="java.lang.String" itemvalue="Application.NewTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CounterTester" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CMWS" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GetIndex" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ThreadedEchoServer" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TextCalc" />
+        <item index="4" class="java.lang.String" itemvalue="Application.NewTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -768,24 +736,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="744" extended-state="6" />
+    <frame x="-4" y="-4" width="1288" height="1004" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44102564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43939394" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44055945" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32423207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32400933" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25037935" sideWeight="0.52649575" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47350428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.56060606" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47319347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -862,21 +830,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/engine/my.function">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ICounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/SuperCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="18" selection-start="650" selection-end="650" vertical-scroll-proportion="0.5833333" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/CounterTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="881" selection-end="956" vertical-scroll-proportion="0.4385965" />
@@ -912,51 +865,72 @@
         <state line="9" column="0" selection-start="70" selection-end="115" vertical-scroll-proportion="0.13094084" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/TextCalc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="318" selection-end="318" vertical-scroll-proportion="0.041162226">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+        <state line="5" column="34" selection-start="108" selection-end="108" vertical-scroll-proportion="0.04225352">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="28" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
+        <state line="47" column="28" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.32159624">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/WordsCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="41" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/TextCalc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+        <state line="25" column="41" selection-start="661" selection-end="661" vertical-scroll-proportion="0.7605634">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/GetIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2885" selection-end="2885" vertical-scroll-proportion="0.0">
+        <state line="95" column="0" selection-start="2954" selection-end="4461" vertical-scroll-proportion="0.9230769">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1425#1433#0" expanded="true" />
-            <element signature="e#1490#1498#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="40" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="13" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0609319">
+        <state line="15" column="32" selection-start="298" selection-end="298" vertical-scroll-proportion="-1.3538462">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="0" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="56" selection-start="1460" selection-end="1460" vertical-scroll-proportion="1.3461539">
+          <folding />
         </state>
       </provider>
     </entry>

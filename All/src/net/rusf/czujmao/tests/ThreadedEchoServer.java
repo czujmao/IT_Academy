@@ -41,49 +41,48 @@ public class ThreadedEchoServer
 /**
  This class handles the client input for one server socket connection.
  */
-class ThreadedEchoHandler implements Runnable
-{
+class ThreadedEchoHandler implements Runnable {
     /**
      Constructs a handler.
      @param i the incoming socket
      @param c the counter for the handlers (used in prompts)
      */
-    public ThreadedEchoHandler(Socket i, int c)
-    {
+    public ThreadedEchoHandler(Socket i, int c) {
         incoming = i; counter = c;
     }
 
-    public void run()
-    {
-        try
-        {
-            try
-            {
+    public void run() {
+        try {
+            try {
                 InputStream inStream = incoming.getInputStream();
                 OutputStream outStream = incoming.getOutputStream();
 
                 Scanner in = new Scanner(inStream);
                 PrintWriter out = new PrintWriter(outStream, true /* autoFlush */);
 
-                out.println( "Hello! Enter BYE to exit." );
+                //out.println( "Hello! Enter BYE to exit." );
 
                 // echo client input
                 boolean done = false;
-                while (!done && in.hasNextLine())
-                {
+                while (!done && in.hasNextLine()) {
                     String line = in.nextLine();
-                    out.println("Echo: " + line);
-                    if (line.trim().equals("BYE"))
+                    //out.println("Echo: " + line);
+//                    System.out.println(line);
+//                    if (line.trim().equals("BYE"))
+                    if ("".equals(line.trim()))
                         done = true;
                 }
-            }
-            finally
-            {
+                String s = "<html><title>test</title><body>Hello <b>world</b></body></html>";
+                out.println("HTTP/1.0 200 OK");
+                out.println("Content-Type: text/html");
+                out.println("Content-Length: "+s.length());
+                out.println("");
+                out.println(s);
+            } finally {
                 incoming.close();
             }
         }
-        catch (IOException e)
-        {
+        catch (IOException e) {
             e.printStackTrace();
         }
     }

@@ -1,5 +1,5 @@
 package net.rusf.czujmao.tests;
-import javax.activation.MimetypesFileTypeMap;
+import javax.activation.*;
 import java.io.File;
 import java.util.*;
 
