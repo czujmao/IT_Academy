@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.URLDecoder;
 import java.util.Scanner;
 
 /**
@@ -60,13 +61,14 @@ class ThreadedHandler implements Runnable {
 
                 boolean done = false;
                 while (!done && in.hasNextLine()) {
-                    String line = in.nextLine();
+                    String line = URLDecoder.decode(in.nextLine(), "UTF-8");
                     if ("".equals(line.trim()))
                         done = true;
                 }
                 String s = "<html><title>list</title><body>" + FileReader.getFileList(Constants.rootPath) + "</body></html>";
                 out.println("HTTP/1.0 200 OK");
                 out.println("Content-Type: text/html");
+                out.println("Content-Encoding: UTF-8");
                 out.println("Content-Length: "+s.length());
                 out.println("");
                 out.println(s);

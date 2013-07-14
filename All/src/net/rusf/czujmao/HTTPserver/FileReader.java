@@ -2,6 +2,8 @@ package net.rusf.czujmao.HTTPserver;
 
 //import javax.activation.*;
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -40,6 +42,11 @@ public class FileReader {
     }
     private static String convertPathToURL (String path) {
         String fullName = Constants.serverURL + ":" + Constants.serverPort;
-        return path.replaceAll(Pattern.quote(Constants.rootPath), fullName).replaceAll(Pattern.quote(File.separator), "/");
+        try {
+//            return URLEncoder.encode(path.replaceAll(Pattern.quote(Constants.rootPath), fullName).replaceAll(Pattern.quote(File.separator), "/"), "UTF-8");
+            return URLEncoder.encode(path.replaceAll(Pattern.quote(Constants.rootPath), "").replaceAll(Pattern.quote(File.separator), "/"), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            return "";
+        }
     }
 }
