@@ -1,6 +1,7 @@
 package net.rusf.czujmao.HTTPserver;
 
 //import javax.activation.*;
+import javax.activation.MimetypesFileTypeMap;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -17,6 +18,7 @@ public class FileReader {
             TreeSet<String> listOfFiles = new TreeSet<String>();
             for (String s : list) {
                 fl = new File(str + (str.endsWith(File.separator)?"":File.separator) + s);
+                String mt = new MimetypesFileTypeMap().getContentType(fl);
                 if (fl.isDirectory())
                     listOfDir.add("<tr><td><a href=\"" + convertPathToURL(fl.getPath()) + "\">"
                             + s + "</a></td><td></td><td></td><td></td></tr>");
