@@ -9,6 +9,10 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 public class FileReader {
+    public static Boolean fileExist(String str) {
+        return new File(str).exists();
+    }
+
     public static String getFileOrDir (String str) {
         File fl = new File(str);
         if (fl.isDirectory())

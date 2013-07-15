@@ -73,6 +73,7 @@ class ThreadedHandler implements Runnable {
                     }
                 }
 
+
                 String s = "<html><title>list</title>" +
                         "<meta http-equiv=\"Content-Type\" content = \"text/html;charset=utf-8\">" +
                         "<body>" + FileReader.getFileOrDir(localPath) + "</body></html>";
@@ -113,5 +114,10 @@ class ThreadedHandler implements Runnable {
   Если простой файл - читаем и отдаём файл (разобраться с заголовками для разных типов, разобраться, почему MIME-type
   одинаковый). Если директория - запрашиваем у текущего класса index.html. Закрываем поток.
 +  3. При создании урлов в html не забывать заменять абсолютный путь на адрес сервера
+
+MVC - главный процесс в треде - контроллер
+при наличиии входных данных на сокете - получает URL (не забыть отказ при отсуствии GET-а)
+Вызываем модель по урлу, модель отдайт строку данных,
+
 
 */
