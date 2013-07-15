@@ -8,6 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URLDecoder;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 /**
  * This CzujMao WebServer - is very simple multithreaded file HTTP server
@@ -59,13 +60,22 @@ class ThreadedHandler implements Runnable {
                 Scanner in = new Scanner(inStream);
                 PrintWriter out = new PrintWriter(outStream, true /* autoFlush */);
 
+                String localPath = "";
                 boolean done = false;
                 while (!done && in.hasNextLine()) {
-                    String line = URLDecoder.decode(in.nextLine(), "UTF-8");
-                    if ("".equals(line.trim()))
+                    String line = URLDecoder.decode(in.nextLine(), "UTF-8").trim();
+                    if ("".equals(line))
                         done = true;
+                    else {
+                        if (line.startsWith("GET")) {
+                            localPath = Constants.rootPath + line.replaceAll(Pattern.quote("GET /"), "").replaceAll(Pattern.quote(" HTTP/1.1"), "");
+                        }
+                    }
                 }
-                String s = "<html><title>list</title><body>" + FileReader.getFileList(Constants.rootPath) + "</body></html>";
+
+                String s = "<html><title>list</title>" +
+                        "<meta http-equiv=\"Content-Type\" content = \"text/html;charset=utf-8\">" +
+                        "<body>" + FileReader.getFileOrDir(localPath) + "</body></html>";
                 out.println("HTTP/1.0 200 OK");
                 out.println("Content-Type: text/html");
                 out.println("Content-Encoding: UTF-8");
