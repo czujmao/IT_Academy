@@ -58,6 +58,7 @@ class ThreadedHandler implements Runnable {
                 OutputStream outStream = incoming.getOutputStream();
 
                 Scanner in = new Scanner(inStream);
+//переписать на массивах байта
                 PrintWriter out = new PrintWriter(outStream, true /* autoFlush */);
 
                 String localPath = null;

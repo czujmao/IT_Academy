@@ -8,6 +8,7 @@ import java.net.URLEncoder;
 import java.util.*;
 import java.util.regex.Pattern;
 
+//переписать на массивах байта
 public class FileReader {
     public static Boolean fileExist(String str) {
         return new File(str).exists();
@@ -35,7 +36,7 @@ public class FileReader {
         String index = dirName + "index.html";
         if (fileExist(index)) {
             return getFile(new File (index));
-        };
+        }
         String[] list = fl.list();
         TreeSet<String> listOfDir = new TreeSet<String>();
         TreeSet<String> listOfFiles = new TreeSet<String>();

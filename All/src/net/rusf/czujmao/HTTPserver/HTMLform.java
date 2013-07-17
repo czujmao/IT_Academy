@@ -7,6 +7,7 @@ import java.io.PrintWriter;
  */
 public class HTMLform {
     public static void make (HTTPstatus status, OutputStream outStream, String data, String MIMEType) {
+//переписать на массивах байта
         String status_str = "";
         PrintWriter out = new PrintWriter(outStream, true /* autoFlush */);
         switch (status) {
