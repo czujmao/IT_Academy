@@ -13,16 +13,29 @@ public class FileReader {
         return new File(str).exists();
     }
 
+    public static String fileMIMEType (String str) {
+        File fl = new File(str);
+        if (fl.isDirectory())
+            return "text/html";
+        else
+            return new MimetypesFileTypeMap().getContentType(fl);
+    }
+
     public static String getFileOrDir (String str) {
         File fl = new File(str);
         if (fl.isDirectory())
             return getFileList(fl);
         else
-            return "";
+            return getFile(fl);
     }
+
     public static String getFileList (File fl) {
         String rStr = "";
         String dirName = fl.getPath() + File.separator;
+        String index = dirName + "index.html";
+        if (fileExist(index)) {
+            return getFile(new File (index));
+        };
         String[] list = fl.list();
         TreeSet<String> listOfDir = new TreeSet<String>();
         TreeSet<String> listOfFiles = new TreeSet<String>();
@@ -49,6 +62,7 @@ public class FileReader {
         rStr = rStr + "</table>";
         return rStr;
     }
+
     private static String getFileInformation (File fl) {
         return "<tr><td><a href=\"" + convertPathToURL(fl.getPath(), Boolean.FALSE) + "\">"
             + fl.getName() + "</a></td><td>"
@@ -65,5 +79,9 @@ public class FileReader {
         } catch (UnsupportedEncodingException e) {
             return "";
         }
+    }
+    public static String getFile(File fl) {
+
+        return "";
     }
 }

@@ -60,7 +60,7 @@ class ThreadedHandler implements Runnable {
                 Scanner in = new Scanner(inStream);
                 PrintWriter out = new PrintWriter(outStream, true /* autoFlush */);
 
-                String localPath = "";
+                String localPath = null;
                 boolean done = false;
                 while (!done && in.hasNextLine()) {
                     String line = URLDecoder.decode(in.nextLine(), "UTF-8").trim();
@@ -69,26 +69,28 @@ class ThreadedHandler implements Runnable {
                     else {
                         if (line.startsWith("GET")) {
                             localPath = Constants.rootPath + line.replaceAll(Pattern.quote("GET /"), "").replaceAll(Pattern.quote(" HTTP/1.1"), "");
+                        } else if (line.startsWith("HEAD")) {
+                            localPath = "HEAD";
                         }
                     }
                 }
-
-
-                String s = "<html><title>list</title>" +
-                        "<meta http-equiv=\"Content-Type\" content = \"text/html;charset=utf-8\">" +
-                        "<body>" + FileReader.getFileOrDir(localPath) + "</body></html>";
-                out.println("HTTP/1.0 200 OK");
-                out.println("Content-Type: text/html");
-                out.println("Content-Encoding: UTF-8");
-                out.println("Content-Length: "+s.length());
-                out.println("");
-                out.println(s);
+                if (null == localPath) {
+                     HTMLform.make(HTTPstatus.NOT_IMPLEMENTED, outStream, "Command not implemented", "text/html");
+                } else if ("HEAD".equals(localPath)) {
+                    HTMLform.make(HTTPstatus.OK, outStream, "", "text/html");
+                } else {
+                    if (FileReader.fileExist(localPath)) {
+                        HTMLform.make(HTTPstatus.OK, outStream, FileReader.getFileOrDir(localPath), FileReader.fileMIMEType(localPath));
+                    } else {
+                        HTMLform.make(HTTPstatus.NOT_FOUND, outStream, "", "text/html");
+                    }
+                }
             } finally {
                 incoming.close();
             }
         }
-        catch (IOException e) {
-            e.printStackTrace();
+        catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 }
