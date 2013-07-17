@@ -22,7 +22,6 @@ public class CMWS {
             while (true) {
                 Socket incoming = s.accept();
                 System.out.println("Spawning " + threadCount);
-//                Runnable r = new ThreadedHandler(incoming, threadCount);
                 Runnable r = new ThreadedHandler(incoming);
                 Thread t = new Thread(r);
                 t.start();
@@ -39,16 +38,8 @@ public class CMWS {
  */
 class ThreadedHandler implements Runnable {
     private Socket incoming;
-//    private int counter;
-    /**
-     Constructs a handler.
-     @param i the incoming socket
-//     @param c the counter for the handlers (used in prompts)
-     */
-//    public ThreadedHandler(Socket i, int c) {
     public ThreadedHandler(Socket i) {
         incoming = i;
-//        counter = c;
     }
 
     public void run() {
@@ -58,9 +49,6 @@ class ThreadedHandler implements Runnable {
                 OutputStream outStream = incoming.getOutputStream();
 
                 Scanner in = new Scanner(inStream);
-//переписать на массивах байта
-                PrintWriter out = new PrintWriter(outStream, true /* autoFlush */);
-
                 String localPath = null;
                 boolean done = false;
                 while (!done && in.hasNextLine()) {
@@ -76,16 +64,18 @@ class ThreadedHandler implements Runnable {
                     }
                 }
                 if (null == localPath) {
-                     HTMLform.make(HTTPstatus.NOT_IMPLEMENTED, outStream, "Command not implemented", "text/html");
+                     HTMLform.make(HTTPstatus.NOT_IMPLEMENTED, outStream, "Command not implemented".getBytes(), "text/html");
                 } else if ("HEAD".equals(localPath)) {
-                    HTMLform.make(HTTPstatus.OK, outStream, "", "text/html");
+                    HTMLform.make(HTTPstatus.OK, outStream, new byte[]{}, "text/html");
                 } else {
                     if (FileReader.fileExist(localPath)) {
                         HTMLform.make(HTTPstatus.OK, outStream, FileReader.getFileOrDir(localPath), FileReader.fileMIMEType(localPath));
                     } else {
-                        HTMLform.make(HTTPstatus.NOT_FOUND, outStream, "", "text/html");
+                        HTMLform.make(HTTPstatus.NOT_FOUND, outStream, "".getBytes(), "text/html");
                     }
                 }
+                inStream.close();
+                outStream.close();
             } finally {
                 incoming.close();
             }
@@ -95,32 +85,3 @@ class ThreadedHandler implements Runnable {
         }
     }
 }
-
-/*
-
-  1. Под линухом проверит, как ведут себя линки и прочие типы файлов
-  2. Под виндой тоже
-  3. Проверить при выводе списка, куда видут линки, если линки на директории, для безопасности
-+  4. Выравнивание по ширине - средствами html, через таблицу, только убрать границы
-+  5. index.html отдавать в виде строки, без создания реального файла. Проверить, можно ли создавать виртуальные файлы
-  6. Проверка, директория или нет - вынести на уровень выше.
-  7. Если в директории есть файл index.html - считать и отдавать его в видео одной строки, если нет - сформировать на лету
-+  8. Сразу формировать таблицу со всеми данными файла, на этапе разделения списка на директории и файлы, тут же формировать урл
-  9. URLdecoder - использовать класс для обработки русских букв в запросе
-
-  Структура.
-+-  0. Из конфиг-файла читаем, что какая директория является корнем
--  1. Слушатель на порту, при возникновении коннекта запускает обработчик в новом потоке. Разобраться с таймаутом
-  2. Обработчик получает строку запроса (проверить вид), парсит?, если пусто - отдаём корень, если есть путь -
-  суммируем с абсолютным путём корня и проверяем. Если нет такого - 404 (сделать отдельный класс - сообщатель об ошибках,
-  не нужно, код ошибки в заголовке ответа, дальше сообщение не короче 512 байт).
-  Если простой файл - читаем и отдаём файл (разобраться с заголовками для разных типов, разобраться, почему MIME-type
-  одинаковый). Если директория - запрашиваем у текущего класса index.html. Закрываем поток.
-+  3. При создании урлов в html не забывать заменять абсолютный путь на адрес сервера
-
-MVC - главный процесс в треде - контроллер
-при наличиии входных данных на сокете - получает URL (не забыть отказ при отсуствии GET-а)
-Вызываем модель по урлу, модель отдайт строку данных,
-
-
-*/

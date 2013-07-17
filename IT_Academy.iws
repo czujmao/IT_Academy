@@ -3,20 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="7eae934c-a868-42c4-8393-d1de33fa27fa" name="Default" comment="First working HTTP server">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/MyField.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/test.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTMLform.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTMLform.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IT_Academy.iws" afterPath="$PROJECT_DIR$/IT_Academy.iws" />
     </list>
     <ignored path="IT_Academy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374062085740" ignored="false" />
+    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374070246885" ignored="false" />
     <file path="/Game.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372431641388" ignored="false" />
     <file path="/Clac.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372433373877" ignored="false" />
     <file path="/Stack.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373068847212" ignored="false" />
     <file path="/Calc.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373086183761" ignored="false" />
-    <file path="/FileReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374026805767" ignored="false" />
+    <file path="/FileReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374068511285" ignored="false" />
     <file path="/StdReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372437778992" ignored="false" />
     <file path="/FlReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372438334465" ignored="false" />
     <file path="/MyReader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373202193237" ignored="false" />
@@ -38,11 +39,12 @@
     <file path="/MyWriter.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373297677942" ignored="false" />
     <file path="/GetIndex.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373591814344" ignored="false" />
     <file path="/ThreadedEchoServer.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373687679828" ignored="false" />
-    <file path="/CMWS.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374026320169" ignored="false" />
+    <file path="/CMWS.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374071001303" ignored="false" />
     <file path="/FileRader.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373693525637" ignored="false" />
     <file path="/Constants.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373694614243" ignored="false" />
     <file path="/HTTPstatus.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373935820754" ignored="false" />
-    <file path="/HTMLform.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374062323715" ignored="false" />
+    <file path="/HTMLform.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374070664608" ignored="false" />
+    <file path="/JDBCconnect.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374065687491" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -95,6 +96,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -104,14 +106,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileReader.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FileReader.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="30" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1199#1207#0" expanded="true" />
-                <element signature="e#1260#1268#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.5128865">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,7 +118,7 @@
       <file leaf-file-name="HTMLform.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTMLform.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="231" selection-end="261" vertical-scroll-proportion="0.0">
+            <state line="26" column="0" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,25 +127,16 @@
       <file leaf-file-name="CMWS.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="16" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0">
+            <state line="44" column="71" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTTPstatus.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTTPstatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="47" selection-start="208" selection-end="208" vertical-scroll-proportion="0.102163464">
+            <state line="4" column="39" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/CounterTester.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ICounter.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/SuperCounter.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/NewTest.java" />
@@ -186,11 +175,12 @@
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/GetIndex.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileRader.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTTPstatus.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/JDBC/JDBCconnect.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTMLform.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java" />
       </list>
     </option>
   </component>
@@ -226,10 +216,10 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane />
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,125 +284,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="All" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="czujmao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TextCalc.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="All" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="czujmao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="All" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="czujmao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="HTTPserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="All" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="czujmao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calc3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT_Academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="All" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="czujmao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calc3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -431,6 +303,7 @@
     <property name="last_opened_file_path" value="C:/Java/jdk1.7.0_25/jre/lib/activation.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="Groovy.Shell.LastModule" value="net.rusf.czujmao" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
@@ -835,31 +708,39 @@
       <created>1373897909733</created>
       <updated>1373897909733</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Working HTTP server ower String">
+      <created>1374062593087</created>
+      <updated>1374062593087</updated>
+    </task>
+    <task id="LOCAL-00031" summary="JDBC sample">
+      <created>1374066061767</created>
+      <updated>1374066061767</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="1004" extended-state="0" />
+    <frame x="-4" y="-4" width="1288" height="1004" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50256413" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44055945" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.502331" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44055945" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983682" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32284382" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.4974359" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47179487" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.497669" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47086248" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32307693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24931507" sideWeight="0.67132866" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -906,7 +787,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="First working HTTP server" />
+    <option name="LAST_COMMIT_MESSAGE" value="JDBC sample" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -925,6 +806,8 @@
     <MESSAGE value="+text" />
     <MESSAGE value="TextCalc first version complite" />
     <MESSAGE value="First working HTTP server" />
+    <MESSAGE value="Working HTTP server ower String" />
+    <MESSAGE value="JDBC sample" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -934,51 +817,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/engine/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="46" selection-start="373" selection-end="373" vertical-scroll-proportion="0.14548981" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/StackCalc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="52" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.49466538" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/TextCalc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="318" selection-end="318" vertical-scroll-proportion="0.041162226">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="108" selection-end="108" vertical-scroll-proportion="0.04225352">
-          <folding />
-        </state>
+        <state line="5" column="34" selection-start="108" selection-end="108" vertical-scroll-proportion="0.04225352" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/MyReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="28" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.32159624">
-          <folding />
-        </state>
+        <state line="47" column="28" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.32159624" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/text/WordsCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="41" selection-start="661" selection-end="661" vertical-scroll-proportion="0.7605634">
-          <folding />
-        </state>
+        <state line="25" column="41" selection-start="661" selection-end="661" vertical-scroll-proportion="0.7605634" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="298" selection-end="298" vertical-scroll-proportion="-1.3538462">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="15" column="32" selection-start="298" selection-end="298" vertical-scroll-proportion="-1.3538462" />
       </provider>
     </entry>
     <entry file="jar://C:/Java/jdk1.7.0_25/src.zip!/java/lang/Thread.java">
@@ -988,61 +844,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/engine/Results.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="12" selection-start="82" selection-end="82" vertical-scroll-proportion="0.38931298">
-          <folding />
-        </state>
+        <state line="6" column="12" selection-start="82" selection-end="82" vertical-scroll-proportion="0.38931298" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc3/engine/Calc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0648855">
-          <folding />
-        </state>
+        <state line="34" column="0" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0648855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/GetIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="95" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.740458">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="47" column="95" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.740458" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/JDBC/JDBCconnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="103" selection-start="594" selection-end="594" vertical-scroll-proportion="0.34735578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTTPstatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.102163464">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTMLform.java">
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/calc/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="231" selection-end="261" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="68" selection-start="299" selection-end="299" vertical-scroll-proportion="0.3063063">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/CMWS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="16" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0">
+        <state line="44" column="71" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java">
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTMLform.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1199#1207#0" expanded="true" />
-            <element signature="e#1260#1268#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTTPstatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
+        <state line="26" column="0" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="47" selection-start="208" selection-end="208" vertical-scroll-proportion="0.102163464">
+        <state line="4" column="39" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.5128865">
           <folding />
         </state>
       </provider>

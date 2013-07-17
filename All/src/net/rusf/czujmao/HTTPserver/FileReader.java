@@ -1,14 +1,12 @@
 package net.rusf.czujmao.HTTPserver;
 
-//import javax.activation.*;
 import javax.activation.MimetypesFileTypeMap;
-import java.io.File;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.net.URLEncoder;
-import java.util.*;
+import java.util.Date;
+import java.util.TreeSet;
 import java.util.regex.Pattern;
 
-//переписать на массивах байта
 public class FileReader {
     public static Boolean fileExist(String str) {
         return new File(str).exists();
@@ -22,7 +20,7 @@ public class FileReader {
             return new MimetypesFileTypeMap().getContentType(fl);
     }
 
-    public static String getFileOrDir (String str) {
+    public static byte[] getFileOrDir (String str) {
         File fl = new File(str);
         if (fl.isDirectory())
             return getFileList(fl);
@@ -30,7 +28,7 @@ public class FileReader {
             return getFile(fl);
     }
 
-    public static String getFileList (File fl) {
+    public static byte[] getFileList (File fl) {
         String rStr = "";
         String dirName = fl.getPath() + File.separator;
         String index = dirName + "index.html";
@@ -43,13 +41,14 @@ public class FileReader {
         File fll = null;
         for (String s : list) {
             fll = new File(dirName + s);
-            String mt = new MimetypesFileTypeMap().getContentType(fll);
             if (fll.isDirectory())
                 listOfDir.add("<tr><td><a href=\"" + convertPathToURL(fll.getPath(), Boolean.FALSE) + "\">"
                         + s + "</a></td><td></td><td></td><td></td></tr>");
             else listOfFiles.add(getFileInformation(fll));
         }
-        rStr = "<table border=\"0\">";
+        rStr = "<html><title>list</title>" +
+                "<meta http-equiv=\"Content-Type\" content = \"text/html;charset=utf-8\">" +
+                "<body><table border=\"0\">";
 
         if (!Constants.rootPath.equals(dirName))
             rStr = rStr + "<tr><td><a href=\"" + convertPathToURL(fl.getParent() + File.separator, Boolean.TRUE) + "\">"
@@ -60,8 +59,8 @@ public class FileReader {
         for (String s : listOfFiles) {
             rStr = rStr + s;
         }
-        rStr = rStr + "</table>";
-        return rStr;
+        rStr = rStr + "</table></body></html>";
+        return rStr.getBytes();
     }
 
     private static String getFileInformation (File fl) {
@@ -72,17 +71,39 @@ public class FileReader {
             + "</td></tr>";
     }
     private static String convertPathToURL (String path, Boolean itsParent) {
-        String fullName = Constants.serverURL + ":" + Constants.serverPort;
         try {
-//            return URLEncoder.encode(path.replaceAll(Pattern.quote(Constants.rootPath), fullName).replaceAll(Pattern.quote(File.separator), "/"), "UTF-8");
             return (itsParent)?"/":"" +
                     URLEncoder.encode(path.replaceAll(Pattern.quote(Constants.rootPath), "").replaceAll(Pattern.quote(File.separator), "/"), "UTF-8");
         } catch (UnsupportedEncodingException e) {
             return "";
         }
     }
-    public static String getFile(File fl) {
+    public static byte[] getFile(File fl) {
+        InputStream is = null;
+        try {
+            is = new FileInputStream(fl);
+        } catch (FileNotFoundException ex) {
+            return ex.getMessage().getBytes();
+        }
+        long length = fl.length();
+        byte[] bytes = new byte[(int)length];
+        int offset = 0;
+        int numRead = 0;
 
-        return "";
+        try {
+            while (offset < bytes.length
+                    && (numRead = is.read(bytes, offset, bytes.length - offset)) >= 0) {
+                offset += numRead;
+            }
+            return bytes;
+        } catch (IOException ex) {
+            return ex.getMessage().getBytes();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException ex) {
+                //do something
+            }
+        }
     }
 }
