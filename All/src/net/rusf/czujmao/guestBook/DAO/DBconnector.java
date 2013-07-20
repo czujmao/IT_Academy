@@ -14,7 +14,7 @@ public class DBconnector {
             System.exit(-1);
         }
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/database?user=user&password=password");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/it_academy?user=root&password=");
         } catch (SQLException ex) {
             ex.printStackTrace();
             System.exit(-1);
