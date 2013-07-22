@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBconnector {
     static Connection connection;
-    static {
+    public static void init() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException ex) {
@@ -19,6 +19,13 @@ public class DBconnector {
             ex.printStackTrace();
             System.exit(-1);
         }
-
+    }
+    public static void close() {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.exit(-1);
+        }
     }
 }

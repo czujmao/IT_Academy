@@ -18,8 +18,8 @@ public class Users {
         statement.close();
         return nickname;
     }
-    public static int getUserID (String nickname) throws SQLException {
-        int userid = -1;
+    public static Integer getUserID (String nickname) throws SQLException {
+        Integer userid = null;
         PreparedStatement statement = DBconnector.connection.prepareStatement("SELECT id FROM users WHERE nickname = ?");
         statement.setString(1, nickname);
         ResultSet result = statement.executeQuery();
@@ -51,5 +51,20 @@ public class Users {
         }
         updater.close();
         return rez;
+    }
+
+    public static Integer checkPass (String nickname, Integer hashPass) throws SQLException {
+        Integer userid = null;
+        PreparedStatement statement = DBconnector.connection.prepareStatement("SELECT id FROM users WHERE nickname = ?" +
+                " AND hashPass = ?");
+        statement.setString(1, nickname);
+        statement.setString(2, hashPass.toString());
+        ResultSet result = statement.executeQuery();
+        while (result.next()) {
+            userid = result.getInt("id");
+        }
+        result.close();
+        statement.close();
+        return userid;
     }
 }
