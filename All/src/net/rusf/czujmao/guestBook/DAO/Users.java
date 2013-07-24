@@ -33,9 +33,8 @@ public class Users {
     public static Boolean addUser (String nickname, Integer hashPass) throws SQLException {
         Boolean rez = Boolean.FALSE;
         Statement statement = DBconnector.connection.createStatement();
-        if (0 != statement.executeUpdate("INSERT INTO users (nickname, hashpass) VALUES (" +
-                nickname + ", " + hashPass.toString() +
-                ")")) {
+        if (0 != statement.executeUpdate("INSERT INTO users (nickname, hashpass) VALUES ('" +
+                nickname + "', " + hashPass.toString() + ")", 1)) {
             rez = Boolean.TRUE;
         }
         statement.close();

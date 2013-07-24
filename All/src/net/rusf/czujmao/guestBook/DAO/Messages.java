@@ -13,7 +13,7 @@ public class Messages {
     public static Boolean addMessage(Message msg) throws SQLException {
         Boolean rez = Boolean.FALSE;
         Statement statement = DBconnector.connection.createStatement();
-        if (0 != statement.executeUpdate("INSERT INTO messages (threadid, datatime, userid, title, text) VALUES (" +
+        if (0 != statement.executeUpdate("INSERT INTO messages (threadid, datetime, userid, title, text) VALUES (" +
                 ((msg.threadid == 0)?"id":msg.threadid.toString()) + ", " + msg.datetime.toString() + ", " +
                 msg.userid.toString() + ", '" + msg.title.trim() + "', '" + msg.text.trim() + "')")) {
             rez = Boolean.TRUE;

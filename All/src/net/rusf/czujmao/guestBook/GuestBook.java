@@ -83,13 +83,14 @@ public class GuestBook {
                         System.out.print("Enter password:");
                         str = Inner.readLine();
                         Integer hashPass1 = str.hashCode();
-                        System.out.print("Enter password again:");
+/*                        System.out.print("Enter password again:");
                         str = Inner.readLine();
                         Integer hashPass2 = str.hashCode();
                         if (hashPass1 != hashPass2) {
                             System.out.println("Password repeat error!");
                             break;
                         }
+*/
                         if (Users.addUser(nickname, hashPass1)) {
                             System.out.println("Ok, user added, now you may logging in.");
                         }
@@ -123,9 +124,15 @@ public class GuestBook {
             }
             System.exit(-1);
         } catch (SQLException sqlex) {
-
+            sqlex.printStackTrace();
         } finally {
             DBconnector.close();
         }
     }
 }
+
+/*
+1. Переписать логику threadid - для заголовочного сообщения 0, для тредовых - по номеру заголовочного
+2. Как правильно вносить в mysql datetime и как его правильно получать в java
+3. Убрать циклическую зависимость пакетов
+*/
