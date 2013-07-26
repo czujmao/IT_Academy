@@ -1,6 +1,6 @@
 package net.rusf.czujmao.guestBook.DAO;
 
-import net.rusf.czujmao.guestBook.Message;
+import net.rusf.czujmao.guestBook.Common.Message;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +14,7 @@ public class Messages {
         Boolean rez = Boolean.FALSE;
         Statement statement = DBconnector.connection.createStatement();
         if (0 != statement.executeUpdate("INSERT INTO messages (threadid, datetime, userid, title, text) VALUES (" +
-                ((msg.threadid == 0)?"id":msg.threadid.toString()) + ", " + msg.datetime.toString() + ", " +
+                ((msg.threadid == 0)?"id":msg.threadid.toString()) + ", '" + msg.datetime.toString() + "', " +
                 msg.userid.toString() + ", '" + msg.title.trim() + "', '" + msg.text.trim() + "')")) {
             rez = Boolean.TRUE;
         }
@@ -31,10 +31,10 @@ public class Messages {
         statement.close();
         return rez;
     }
-    public static Boolean delMessage(Message msg) throws SQLException {
+    public static Boolean delMessage(Integer id) throws SQLException {
         Boolean rez = Boolean.FALSE;
         Statement statement = DBconnector.connection.createStatement();
-        if (0 != statement.executeUpdate("DELETE FROM messages WHERE id = " + msg.id.toString())) {
+        if (0 != statement.executeUpdate("DELETE FROM messages WHERE id = " + id.toString())) {
             rez = Boolean.TRUE;
         }
         statement.close();
@@ -47,8 +47,9 @@ public class Messages {
         statement.setString(1, id.toString());
         ResultSet result = statement.executeQuery();
         while (result.next()) {
-            msg = new Message(result.getInt("messages.id"), result.getInt("messages.threadid"), result.getDate("messages.datetime"),
-                    result.getInt("messages.userid"), result.getString("users.nickname"), result.getString("messages.title"),
+            msg = new Message(result.getInt("messages.id"), result.getInt("messages.threadid"),
+                    result.getTimestamp("messages.datetime"), result.getInt("messages.userid"),
+                    result.getString("users.nickname"), result.getString("messages.title"),
                     result.getString("messages.text"));
         }
         result.close();
@@ -58,14 +59,15 @@ public class Messages {
     public static ArrayList<Message> getMessages() throws SQLException {
         ArrayList<Message> msg = new ArrayList<Message>();
         PreparedStatement statement = DBconnector.connection.prepareStatement("SELECT * FROM messages, users " +
-                "WHERE messages.id = messages.threadid " +
+                "WHERE messages.threadid = 0 " +
                 "AND messages.userid = users.id ORDER BY datetime DESC");
         ResultSet result = statement.executeQuery();
         int count = 0;
         while (result.next()) {
             msg.add(count++, new Message(result.getInt("messages.id"), result.getInt("messages.threadid"),
-                    result.getDate("messages.datetime"), result.getInt("messages.userid"), result.getString("users.nickname"),
-                    result.getString("messages.title"), result.getString("messages.text")));
+                    result.getTimestamp("messages.datetime"), result.getInt("messages.userid"),
+                    result.getString("users.nickname"), result.getString("messages.title"),
+                    result.getString("messages.text")));
         }
         result.close();
         statement.close();
@@ -80,8 +82,9 @@ public class Messages {
         int count = 0;
         while (result.next()) {
             msg.add(count++, new Message(result.getInt("messages.id"), result.getInt("messages.threadid"),
-                    result.getDate("messages.datetime"), result.getInt("messages.userid"), result.getString("users.nickname"),
-                    result.getString("messages.title"), result.getString("messages.text")));
+                    result.getTimestamp("messages.datetime"), result.getInt("messages.userid"),
+                    result.getString("users.nickname"), result.getString("messages.title"),
+                    result.getString("messages.text")));
         }
         result.close();
         statement.close();
@@ -97,8 +100,9 @@ public class Messages {
         int count = 0;
         while (result.next()) {
             msg.add(count++, new Message(result.getInt("messages.id"), result.getInt("messages.threadid"),
-                    result.getDate("messages.datetime"), result.getInt("messages.userid"), result.getString("users.nickname"),
-                    result.getString("messages.title"), result.getString("messages.text")));
+                    result.getTimestamp("messages.datetime"), result.getInt("messages.userid"),
+                    result.getString("users.nickname"), result.getString("messages.title"),
+                    result.getString("messages.text")));
         }
         result.close();
         statement.close();
@@ -113,8 +117,9 @@ public class Messages {
         int count = 0;
         while (result.next()) {
             msg.add(count++, new Message(result.getInt("messages.id"), result.getInt("messages.threadid"),
-                    result.getDate("messages.datetime"), result.getInt("messages.userid"), result.getString("users.nickname"),
-                    result.getString("messages.title"), result.getString("messages.text")));
+                    result.getTimestamp("messages.datetime"), result.getInt("messages.userid"),
+                    result.getString("users.nickname"), result.getString("messages.title"),
+                    result.getString("messages.text")));
         }
         result.close();
         statement.close();

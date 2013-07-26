@@ -1,17 +1,18 @@
-package net.rusf.czujmao.guestBook;
+package net.rusf.czujmao.guestBook.Common;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Message {
     public Integer id;
     public Integer threadid;
-    public Date datetime;
+    public Timestamp datetime;
     public Integer userid;
     public String nickname;
     public String title;
     public String text;
 
-    public Message (Integer id, Integer threadid, Date datetime, Integer userid, String nickname, String title, String text) {
+    public Message (Integer id, Integer threadid, Timestamp datetime, Integer userid, String nickname, String title, String text) {
         this.id = id;
         this.threadid = threadid;
         this.datetime = datetime;
@@ -28,7 +29,7 @@ public class Message {
         System.out.println(this.text);
     }
     public void printhead() {
-        System.out.println("ID = " + this.id.toString() + "Date and time = " + this.datetime.toString() +
-            "Autor = " + this.nickname + "Title = " + this.title);
+        System.out.println("ID = " + this.id.toString() + " Date and time = " + this.datetime.toString() +
+            " Autor = " + this.nickname + " Title = " + this.title);
     }
 }

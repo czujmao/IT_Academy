@@ -1,6 +1,7 @@
 package net.rusf.czujmao.guestBook;
 
 
+import net.rusf.czujmao.guestBook.Common.Message;
 import net.rusf.czujmao.guestBook.DAO.DBconnector;
 import net.rusf.czujmao.guestBook.DAO.Messages;
 import net.rusf.czujmao.guestBook.DAO.Users;
@@ -9,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -47,7 +49,7 @@ public class GuestBook {
                         System.out.print("Enter message's text:");
                         str = Inner.readLine();
                         String text = str;
-                        if (Messages.addMessage(new Message(0, 0, new Date(System.currentTimeMillis()), userid, "", title, text))) {
+                        if (Messages.addMessage(new Message(0, 0, new Timestamp(System.currentTimeMillis()), userid, "", title, text))) {
                             System.out.print("Message added");
                         }
                         break;
@@ -109,7 +111,19 @@ public class GuestBook {
                         else System.out.println("Message not found!");
                         break;
                     }
-                    case "EDITMSG": break;
+                    case "EDITMSG":
+                    case "DELMSG": {
+                        Integer num = null;
+                        try {
+                            num = Integer.parseInt(cmd[1]);
+                        } catch (NumberFormatException ex) {
+                            System.out.println("Syntax Error: you must enter message's number");
+                            break;
+                        }
+                        if (Messages.delMessage(num)) System.out.print("Message deleted");
+                        else System.out.println("Message not found!");
+                        break;
+                    }
                     case "GETTHREAD": break;
                 }
 
@@ -132,7 +146,5 @@ public class GuestBook {
 }
 
 /*
-1. Переписать логику threadid - для заголовочного сообщения 0, для тредовых - по номеру заголовочного
-2. Как правильно вносить в mysql datetime и как его правильно получать в java
-3. Убрать циклическую зависимость пакетов
+
 */

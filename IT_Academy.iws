@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eae934c-a868-42c4-8393-d1de33fa27fa" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\Users\arthur\IdeaProjects\IT_Academy\All\src\net\rusf\czujmao\guestBook\Message.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/Common/Message.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/GuestBook.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/GuestBook.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IT_Academy.iws" afterPath="$PROJECT_DIR$/IT_Academy.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Messages.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Messages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Users.java" afterPath="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Users.java" />
     </list>
     <ignored path="IT_Academy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374541789739" ignored="false" />
+    <file path="/Dummy.txt" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374666216539" ignored="false" />
     <file path="/Game.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372431641388" ignored="false" />
     <file path="/Clac.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1372433373877" ignored="false" />
     <file path="/Stack.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373068847212" ignored="false" />
@@ -42,12 +42,12 @@
     <file path="/HTTPstatus.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1373935820754" ignored="false" />
     <file path="/HTMLform.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374070664608" ignored="false" />
     <file path="/JDBCconnect.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374065687491" ignored="false" />
-    <file path="/Messages.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374505808182" ignored="false" />
-    <file path="/Message.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374507633436" ignored="false" />
+    <file path="/Messages.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374767212443" ignored="false" />
+    <file path="/Message.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374765812280" ignored="false" />
     <file path="/User.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374197785988" ignored="false" />
     <file path="/Users.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374543109467" ignored="false" />
     <file path="/DBconnector.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374454660352" ignored="false" />
-    <file path="/GuestBook.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374598821507" ignored="false" />
+    <file path="/GuestBook.java" changelist="7eae934c-a868-42c4-8393-d1de33fa27fa" time="1374767152922" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,23 +98,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Messages.java" line="15" class="net.rusf.czujmao.guestBook.DAO.Messages" package="net.rusf.czujmao.guestBook.DAO">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -128,7 +112,7 @@
       <file leaf-file-name="Messages.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Messages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="80" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
+            <state line="36" column="78" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,7 +121,7 @@
       <file leaf-file-name="Users.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="18" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.0">
+            <state line="69" column="0" selection-start="2759" selection-end="2759" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,17 +130,21 @@
       <file leaf-file-name="DBconnector.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/DBconnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="16" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Message.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/Message.java">
+        <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/Common/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,7 +152,7 @@
       <file leaf-file-name="GuestBook.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/GuestBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="41" selection-start="5640" selection-end="5640" vertical-scroll-proportion="0.8645418">
+            <state line="149" column="0" selection-start="6100" selection-end="6100" vertical-scroll-proportion="0.72908366">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/GetIndex.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/tests/ThreadedEchoServer.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/FileRader.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/HTTPserver/HTTPstatus.java" />
@@ -207,8 +194,9 @@
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/GuestBook.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/User.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/DBconnector.java" />
-        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/Message.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Users.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/Message.java" />
+        <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/Common/Message.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Messages.java" />
         <option value="$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/GuestBook.java" />
       </list>
@@ -341,6 +329,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DAO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IT_Academy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="All" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="czujmao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guestBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -782,7 +796,11 @@
       <created>1374508208660</created>
       <updated>1374508208660</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Not working Guest book">
+      <created>1374666290473</created>
+      <updated>1374666290473</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -803,7 +821,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24734446" sideWeight="0.50085473" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46962234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46837607" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -926,13 +944,6 @@
         <state line="45" column="0" selection-start="856" selection-end="1144" vertical-scroll-proportion="0.9406475" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/DBconnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.25-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="28" selection-start="7216" selection-end="7216" vertical-scroll-proportion="-3.0">
@@ -947,20 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="18" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.25-bin.jar!/com/mysql/jdbc/StatementImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="231" column="18" selection-start="11650" selection-end="11650" vertical-scroll-proportion="0.36725664">
@@ -968,16 +965,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="2759" selection-end="2759" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/DBconnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/Common/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/DAO/Messages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="80" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
+        <state line="36" column="78" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/All/src/net/rusf/czujmao/guestBook/GuestBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="41" selection-start="5640" selection-end="5640" vertical-scroll-proportion="0.8645418">
+        <state line="149" column="0" selection-start="6100" selection-end="6100" vertical-scroll-proportion="0.72908366">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
